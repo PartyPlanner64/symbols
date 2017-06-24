@@ -1,12 +1,18 @@
 800145B0,code,read_mainfs_file,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80014730,code,free_mainfs_file,Free's an allocated MainFS file pointer
+8003B6C8,code,free?
+8003C14C,code,direction_prompt,Prompts player to choose path at branch
 8004A394,code,hvq_decode,HVQ image decoder
+8004C900,code,event_table_hydrate,Moves event table data into the space data
 8004CF44,code,inst_turn_player_blue,Sets the player's turn state blue
 8004CF4C,code,inst_turn_player_red,Sets the player's turn state red
 8004CF54,code,inst_turn_player_green,Sets the player's turn state green
 8004D008,code,get_turns_elapsed,Subtracts remaining turns from total turns
+8005992C,code,free?
 8007F54C,code,hvq_decode?,HVQ image decoder
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
+800D6030,data,perm_heap_addr,Address of permanent heap
+800D6040,data,temp_heap_addr,Address of temporary heap
 800ED142,u16,bank_coins,Coins in bank
 800ED144,u16,bank_stars,Stars in bank
 800ED5C6,u16,total_turns,Total game turns
@@ -21,6 +27,15 @@
 800F32C2,u16,p1_next_chain_index,Player 1 next chain index
 800F32C4,u16,p1_next_space_index,Player 1 next space index
 800F32C6,u8,p1_poisoned,Player 1 poisoned boolean
+800F32C7,u8,p1_turn_status,Color based on type of space landed on
+800F32D4,u16,p1_total_minigame_coins,Player 1 total Mini-Game coins collected
+800F32D8,u8,p1_total_happening_spaces,Player 1 total number of Happening Spaces landed on
+800F32D9,u8,p1_total_red_spaces,Player 1 total number of red spaces landed on
+800F32DA,u8,p1_total_blue_spaces,Player 1 total number of blue spaces landed on
+800F32DB,u8,p1_total_minigame_spaces,Player 1 total number of Mini-Game spaces landed on
+800F32DC,u8,p1_total_chance_spaces,Player 1 total number of Chance Time spaces landed on
+800F32DD,u8,p1_total_mushroom_spaces,Player 1 total number of Mushroom spaces landed on
+800F32DE,u8,p1_total_bowser_spaces,Player 1 total number of Bowser spaces landed on
 800F32E4,u8,p2_char,Player 2 character
 800F32E8,u16,p2_coins,Player 2 coin count
 800F32EA,s16,p2_minigame_coins,Player 2 coins in current Mini-Game
@@ -30,6 +45,14 @@
 800F32F2,u16,p2_next_chain_index,Player 2 next chain index
 800F32F4,u16,p2_next_space_index,Player 2 next space index
 800F32F6,u8,p2_poisoned,Player 2 poisoned boolean
+800F32F7,u8,p2_turn_status,Color based on type of spaced landed on
+800F3308,u8,p2_total_happening_spaces,Player 2 total number of Happening spaces landed on
+800F3309,u8,p2_total_red_spaces,Player 2 total number of red spaces landed on
+800F330A,u8,p2_total_blue_spaces,Player 2 total number of blue spaces landed on
+800F330B,u8,p2_total_minigame_spaces,Player 2 total number of Mini-Game spaces landed on
+800F330C,u8,p2_total_chance_spaces,Player 2 total number of Chance Time spaces landed on
+800F330D,u8,p2_total_mushroom_spaces,Player 2 total number of Mushroom spaces landed on
+800F330E,u8,p2_total_bowser_spaces,Player 2 total number of Bowser spaces landed on
 800F3314,u8,p3_char,Player 3 character
 800F3318,u16,p3_coins,Player 3 coin count
 800F331A,s16,p3_minigame_coins,Player 3 coins in current Mini-Game
@@ -39,6 +62,14 @@
 800F3322,u16,p3_next_chain_index,Player 3 next chain index
 800F3324,u16,p3_next_space_index,Player 3 next space index
 800F3326,u8,p3_poisoned,Player 3 poisoned boolean
+800F3327,u8,p3_turn_status,Color based on type of space landed on
+800F3338,u8,p3_total_happening_spaces,Player 3 total number of Happening spaces landed on
+800F3339,u8,p3_total_red_spaces,Player 3 total number of red spaces landed on
+800F333A,u8,p3_total_blue_spaces,Player 3 total number of blue spaces landed on
+800F333B,u8,p3_total_minigame_spaces,Player 3 total number of Mini-Game spaces landed on
+800F333C,u8,p3_total_chance_spaces,Player 3 total number of Chance Time spaces landed on
+800F333D,u8,p3_total_mushroom_spaces,Player 3 total number of Mushroom spaces landed on
+800F333E,u8,p3_total_bowser_spaces,Player 3 total number of Bowser spaces landed on
 800F3344,u8,p4_char,Player 4 character
 800F3348,u16,p4_coins,Player 4 coin count
 800F334A,s16,p4_minigame_coins,Player 4 coins in current Mini-Game
@@ -48,3 +79,11 @@
 800F3352,u16,p4_next_chain_index,Player 4 next chain index
 800F3354,u16,p4_next_space_index,Player 4 next space index
 800F3356,u8,p4_poisoned,Player 4 poisoned boolean
+800F3357,u8,p4_turn_status,Color based on type of space landed on
+800F3368,u8,p4_total_happening_spaces,Player 4 total number of Happening spaces landed on
+800F3369,u8,p4_total_red_spaces,Player 4 total number of red spaces landed on
+800F336A,u8,p4_total_blue_spaces,Player 4 total number of blue spaces landed on
+800F336B,u8,p4_total_minigame_spaces,Player 4 total number of Mini-Game spaces landed on
+800F336C,u8,p4_total_chance_spaces,Player 4 total number of Chance Time spaces landed on
+800F336D,u8,p4_total_mushroom_spaces,Player 4 total number of Mushroom spaces landed on
+800F336E,u8,p4_total_bowser_spaces,Player 4 total number of Bowser spaces landed on
