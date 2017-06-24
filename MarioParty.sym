@@ -1,0 +1,27 @@
+8004CF44,code,inst_turn_player_blue,Sets the player's turn state blue
+8004CF4C,code,inst_turn_player_red,Sets the player's turn state red
+8004CF54,code,inst_turn_player_green,Sets the player's turn state green
+800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
+800ED142,u16,bank_coins,Coins in bank
+800ED144,u16,bank_stars,Stars in bank
+800ED5C6,u16,total_turns,Total game turns
+800ED5C8,u16,remaining_turns,Remaining turns
+800F09F6,u16,scene,Current scene
+800F32B4,u8,p1_char,Player 1 character
+800F32B8,u16,p1_coins,Player 1 coin count
+800F32BA,s16,p1_minigame_coins,Player 1 coins in current Mini-Game
+800F32BC,u16,p1_stars,Player 1 star count
+800F32BE,u16,p1_cur_chain_index,Player 1 current chain index
+800F32C0,u16,p1_cur_space_index,Player 1 current space index
+800F32E4,u8,p2_char,Player 2 character
+800F32E8,u16,p2_coins,Player 2 coin count
+800F32EA,s16,p2_minigame_coins,Player 2 coins in current Mini-Game
+800F32EC,u16,p2_stars,Player 2 star count
+800F3314,u8,p3_char,Player 3 character
+800F3318,u16,p3_coins,Player 3 coin count
+800F331A,s16,p3_minigame_coins,Player 3 coins in current Mini-Game
+800F331C,u16,p3_stars,Player 3 star count
+800F3344,u8,p4_char,Player 4 character
+800F3348,u16,p4_coins,Player 4 coin count
+800F334A,s16,p4_minigame_coins,Player 4 coins in current Mini-Game
+800F334C,u16,p4_stars,Player 4 star count
