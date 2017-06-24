@@ -8,6 +8,7 @@
 8004CF4C,code,inst_turn_player_red,Sets the player's turn state red
 8004CF54,code,inst_turn_player_green,Sets the player's turn state green
 8004D008,code,get_turns_elapsed,Subtracts remaining turns from total turns
+8004D844,code,set_next_chain_and_space,Basic end-of-chain assignment
 8005992C,code,free?
 8007F54C,code,hvq_decode?,HVQ image decoder
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
@@ -17,6 +18,7 @@
 800ED144,u16,bank_stars,Stars in bank
 800ED5C6,u16,total_turns,Total game turns
 800ED5C8,u16,remaining_turns,Remaining turns
+800ED5DC,u16,current_player_index,Player who's turn is active
 800F09F6,u16,scene,Current scene
 800F32B4,u8,p1_char,Player 1 character
 800F32B8,u16,p1_coins,Player 1 coin count
