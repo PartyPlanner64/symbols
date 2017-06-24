@@ -1,6 +1,11 @@
+800145B0,code,read_mainfs_file,Reads file from MainFS, allocating space. A0=DDDDFFFF
+80014730,code,free_mainfs_file,Free's an allocated MainFS file pointer
+8004A394,code,hvq_decode,HVQ image decoder
 8004CF44,code,inst_turn_player_blue,Sets the player's turn state blue
 8004CF4C,code,inst_turn_player_red,Sets the player's turn state red
 8004CF54,code,inst_turn_player_green,Sets the player's turn state green
+8004D008,code,get_turns_elapsed,Subtracts remaining turns from total turns
+8007F54C,code,hvq_decode?,HVQ image decoder
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
 800ED142,u16,bank_coins,Coins in bank
 800ED144,u16,bank_stars,Stars in bank
