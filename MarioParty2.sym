@@ -1,0 +1,18 @@
+800DEFD0,data,perm_heap_addr,Permanent heap pointer
+800DEFE0,data,temp_heap_addr,Temporary heap address
+800FA63E,u16,scene,Current scene number
+800FD2C8,u16,p1_coins,Player 1 coin count
+800FD2CE,u16,p1_stars,Player 1 star count
+800FD2D0,u16,p1_cur_chain_index,Player 1 current chain index
+800FD2D2,u16,p1_cur_space_index,Player 1 current space index
+800FD2D4,u16,p1_next_chain_index,Player 1 next chain index
+800FD2D6,u16,p1_next_space_index,Player 1 next space index
+800FD2D9,u8,p1_item,Player 1 item
+800FD2FC,u16,p2_coins,Player 2 coin count
+800FD304,u16,p2_cur_chain_index,Player 2 current chain index
+800FD306,u16,p2_cur_space_index,Player 2 current space index
+800FD308,u16,p2_next_chain_index,Player 2 next chain index
+800FD30A,u16,p2_next_space_index,Player 2 next space index
+800FD30D,u8,p2_item,Player 2 item
+800FD341,u8,p3_item,Player 3 item
+800FD375,u8,p4_item,Player 4 item
