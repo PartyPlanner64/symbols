@@ -8,11 +8,15 @@
 800FD2D4,u16,p1_next_chain_index,Player 1 next chain index
 800FD2D6,u16,p1_next_space_index,Player 1 next space index
 800FD2D9,u8,p1_item,Player 1 item
+800FD2DA,u16,p1_turn_status,Player 1 turn status
 800FD2FC,u16,p2_coins,Player 2 coin count
 800FD304,u16,p2_cur_chain_index,Player 2 current chain index
 800FD306,u16,p2_cur_space_index,Player 2 current space index
 800FD308,u16,p2_next_chain_index,Player 2 next chain index
 800FD30A,u16,p2_next_space_index,Player 2 next space index
 800FD30D,u8,p2_item,Player 2 item
+800FD30E,u16,p2_turn_status,Player 2 turn status
 800FD341,u8,p3_item,Player 3 item
+800FD342,u16,p3_turn_statu,Player 3 turn status
 800FD375,u8,p4_item,Player 4 item
+800FD376,u16,p4_turn_status,Player 4 turn status
