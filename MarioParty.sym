@@ -10,6 +10,9 @@
 8004D008,code,get_turns_elapsed,Subtracts remaining turns from total turns
 8004D844,code,set_next_chain_and_space,Basic end-of-chain assignment
 8005992C,code,free?
+8005DC28,code,CreateProcess
+80063550,code,SleepProcess
+800635B4,code,SleepVProcess
 8007F54C,code,hvq_decode?,HVQ image decoder
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
 800D6030,data,perm_heap_addr,Address of permanent heap
