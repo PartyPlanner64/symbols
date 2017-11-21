@@ -1,2 +1,5 @@
 8004F010,code,SleepProcess
 8004F074,code,SleepVProcess
+800CD05A,u8,total_turns
+800CD05B,u8,current_turn
+800D41C0,u32,cur_player_spaces_remaining
