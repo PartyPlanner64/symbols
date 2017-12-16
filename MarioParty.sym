@@ -1,6 +1,7 @@
 800145B0,code,read_mainfs_file,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80014730,code,free_mainfs_file,Free's an allocated MainFS file pointer
 8001B290,code,parse_objtype_10,Parse OBJ1 type 0x10
+8001C2E8,code,find_form_entry,Finds a FORM entry. A0=entry type (like "OBJ1")
 8003B6C8,code,free?
 8003C14C,code,direction_prompt,Prompts player to choose path at branch
 8004A394,code,hvq_decode,HVQ image decoder
