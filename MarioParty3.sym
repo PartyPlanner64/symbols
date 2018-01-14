@@ -1,5 +1,6 @@
 8004F010,code,SleepProcess
 8004F074,code,SleepVProcess
+80055810,code,ImgPackParse
 8007BE80,code,Panic
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
