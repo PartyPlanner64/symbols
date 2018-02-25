@@ -23,6 +23,7 @@
 800ED5C8,u16,remaining_turns,Remaining turns
 800ED5DC,u16,current_player_index,Player who's turn is active
 800F09F6,u16,scene,Current scene
+800F2CDC,u16,hidden_block_space_index,Space index of hidden block
 800F32B4,u8,p1_char,Player 1 character
 800F32B8,u16,p1_coins,Player 1 coin count
 800F32BA,s16,p1_minigame_coins,Player 1 coins in current Mini-Game
