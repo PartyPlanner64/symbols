@@ -1,3 +1,6 @@
+80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
+80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
+8005568C,code,EventTableHydrate,Moves event table data into the space data
 800DEFD0,data,perm_heap_addr,Permanent heap pointer
 800DEFE0,data,temp_heap_addr,Temporary heap address
 800FA63E,u16,scene,Current scene number
