@@ -4,21 +4,49 @@
 8001C2E8,code,FindFormEntry,Finds a FORM entry. A0=entry type (like "OBJ1")
 8003B6C8,code,free?
 8003C14C,code,DirectionPrompt,Prompts player to choose path at branch
+80049E70,code,HVQBGInstantiate?,A0=rom_hvq_table,A1=0x45?,A2=4?
+80049F4C,code,HVQBGInstantiate?,A0=hvqdir?
 8004A394,code,HVQDecode,HVQ image decoder
+8004BDFC,code,BoardDefInit?,A0=fsdir,A1=fsfile
 8004C900,code,EventTableHydrate,Moves event table data into the space data
 8004CF44,code,SetPlayerBlue,Sets the player's turn state blue
 8004CF4C,code,SetPlayerRed,Sets the player's turn state red
 8004CF54,code,SetPlayerGreen,Sets the player's turn state green
 8004D008,code,GetTurnsElapsed,Subtracts remaining turns from total turns
 8004D844,code,SetNextChainAndSpace,Basic end-of-chain assignment
+80052A80,code,GetCurrentPlayerIndex
+80052A8C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
+80052ACC,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
+80052AE8,code,playerrelated?,A0=player_index
+80052B20,code,PlayerIsCPU,A0=player_index
+80052B48,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
+80052BB8,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
+80052BE8,code,playerrelated?,A0=player_index called each time player animation changes on board
+80052C44,code,playerrelated?,called when player hits dice
+80052CCC,code,playerrelated?
+80052D34,code,playerrelated?
+80052DC8,code,playplayeranim?,A0=index,A1=character_anim_pointer
+80052E84,code,playplayeranim?,A0=index,calls 52DC8
+80052ECC,code,playerrelated?
+80052F04,code,playerrelated?
+80052F34,code,playerrelated?
+80052F6C,code,playerrelated?
+80052F9C,code,playerrelated?
+80052FD4,code,playerrelated?
+80053020,code,ClearPlayer0x20,clears all 0x20 entries in player structs
+80053064,code,SetD8380?
+800532E0,code,ClearD8380andD8394?
+80056A08,code,SetupDKBoard?,A1=boarddeffile=69
 8005992C,code,free?
 8005DC28,code,CreateProcess
 80063550,code,SleepProcess
 800635B4,code,SleepVProcess
 8007F54C,code,HVQDecodeInner,HVQ image decoder
+800C5490,data,character_anim_pointers?
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
 800D6030,data,perm_heap_addr,Address of permanent heap
 800D6040,data,temp_heap_addr,Address of temporary heap
+800D8380,data,player_related?,cleared with 0x20 entries
 800ED142,u16,bank_coins,Coins in bank
 800ED144,u16,bank_stars,Stars in bank
 800ED5C6,u16,total_turns,Total game turns
