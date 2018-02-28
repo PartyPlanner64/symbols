@@ -1,8 +1,17 @@
 800145B0,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80014730,code,FreeMainFS,Free's an allocated MainFS file pointer
+80014750,code,FreeMainFS?,identical
+80014770,code,MainFSGetSomeROMAddr?,A0=0x2F?,A1=dir,seems to be caching something?
+800171EC,code,dmarelated?,A0=ram_addr,A1=larger_ram_addr,A2=size
+8001745C,code,DMA,A0=rom_addr,A1=ram_addr,A2=size
 8001B290,code,ParseObjType10,Parse OBJ1 type 0x10
 8001C2E8,code,FindFormEntry,Finds a FORM entry. A0=entry type (like "OBJ1")
-8003B6C8,code,free?
+8003B680,code,MakePermHeap,A0=heap_addr,A1=heap_len,calls MakeHeap and persists pointer in 800D6030
+8003B6A4,code,MallocPerm,A0=size,mallocs in the permanent heap
+8003B6C8,code,FreePerm,A0=addr,frees in the permanent heap, really an alias for normal free
+8003B750,code,MakeTempHeap,A0=heap_addr,A1=heap_len,calls MakeHeap and persists pointer in 800D6040
+8003B774,code,MallocTemp,A0=size,mallocs in the temporary heap
+8003B798,code,FreeTemp,A0=addr,frees in the temp heap, really an alias for normal free
 8003C14C,code,DirectionPrompt,Prompts player to choose path at branch
 80049E70,code,HVQBGInstantiate?,A0=rom_hvq_table,A1=0x45?,A2=4?
 80049F4C,code,HVQBGInstantiate?,A0=hvqdir?
@@ -37,13 +46,19 @@
 80053064,code,SetD8380?
 800532E0,code,ClearD8380andD8394?
 80056A08,code,SetupDKBoard?,A1=boarddeffile=69
-8005992C,code,free?
+80059880,code,MakeHeap,A0=addr,A1=size,instantiates the heap by writing initial header
+800598A0,code,Malloc,A0=heap pointer (main or temp),A1=size
+8005992C,code,Free,A0=allocated heap pointer
 8005DC28,code,CreateProcess
 80063550,code,SleepProcess
 800635B4,code,SleepVProcess
 8007F54C,code,HVQDecodeInner,HVQ image decoder
+8008C360,code,clearmem?,Writes all zeroes,A0=ram_addr,A1=len_to_clear,may need to be 0x20 divisible,may do other stuff?
 800C5490,data,character_anim_pointers?
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
+800D12F0,data,main_fs_rom_location
+800D12F4,data,main_fs_dir_count,Number of directories in main filesystem
+800D1300,data,main_fs_cur_dir_file_count,Count of files in directory being accessed
 800D6030,data,perm_heap_addr,Address of permanent heap
 800D6040,data,temp_heap_addr,Address of temporary heap
 800D8380,data,player_related?,cleared with 0x20 entries
