@@ -20,12 +20,18 @@
 80049F4C,code,HVQBGInstantiate?,A0=hvqdir?
 8004A394,code,HVQDecode,HVQ image decoder
 8004BDFC,code,BoardDefInit?,A0=fsdir,A1=fsfile
+8004C1EC,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
+8004C204,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 8004C900,code,EventTableHydrate,Moves event table data into the space data
+8004C968,code,ExecuteEventForSpace?,does jalr to event code pointer or creates process
+8004CB2C,code,SetCurrentSpaceIndex?,A0=space_index
+8004CB34,code,GetCurrentSpaceIndex?
 8004CF44,code,SetPlayerBlue,Sets the player's turn state blue
 8004CF4C,code,SetPlayerRed,Sets the player's turn state red
 8004CF54,code,SetPlayerGreen,Sets the player's turn state green
 8004D008,code,GetTurnsElapsed,Subtracts remaining turns from total turns
-8004D844,code,SetNextChainAndSpace,Basic end-of-chain assignment
+8004D7D8,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
+8004D844,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
 8004D930,code,CreateTextWindow,creates a text window based on upper left x and y coordinate, and the number of characters on the x and y axis
 8004D9D8,code,ShowTextWindow
 8004DAD0,code,HideTextWindow
@@ -56,10 +62,12 @@
 80059880,code,MakeHeap,A0=addr,A1=size,instantiates the heap by writing initial header
 800598A0,code,Malloc,A0=heap pointer (main or temp),A1=size
 8005992C,code,Free,A0=allocated heap pointer
+80059B00,code,Ensure16,A0=num,0xFFF0 & (A0 + 0x1F),seems to pad number up
 8005B75C,code,StringLen?,A0=string_num,A1=?table?
 8005B7E8,code,LoadString?,A0=string_num,returns pointer
 8005DC28,code,CreateProcess
 800622BC,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str (consider using ParsePrintf)
+80063550,code,RunProcess?,event code executes as a result of this
 80063550,code,SleepProcess
 800635B4,code,SleepVProcess
 8006D7D8,code,LoadStringIntoWindow,A0=window_id,A1=string_id
@@ -73,6 +81,8 @@
 800D1300,data,main_fs_cur_dir_file_count,Count of files in directory being accessed
 800D6030,data,perm_heap_addr,Address of permanent heap
 800D6040,data,temp_heap_addr,Address of temporary heap
+800D8108,data,space_data,pointer to space data parsed from board def file
+800D8110,data,chain_data_addr,pointer to array of chain lengths and indices
 800D8380,data,player_related?,cleared with 0x20 entries
 800ECB24,data,debug_font_color,16 color values
 800ED142,u16,bank_coins,Coins in bank
@@ -81,6 +91,7 @@
 800ED5C6,u16,total_turns,Total game turns
 800ED5C8,u16,remaining_turns,Remaining turns
 800ED5DC,u16,current_player_index,Player who's turn is active
+800ED5E0,u16,current_space_index?
 800F09F6,u16,scene,Current scene
 800F2CDC,u16,hidden_block_space_index,Space index of hidden block
 800F32B4,u8,p1_char,Player 1 character
