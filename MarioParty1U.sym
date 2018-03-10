@@ -332,7 +332,7 @@
 800935B0,code,osSetEventMesg
 80093660,code,__osSetHWIntrRoutine
 800936C0,code,guNormalize?
-0093780,code,osGetCount
+80093780,code,osGetCount
 800937A0,code,__osProbeTLB
 80093920,code,osSetTimer
 800939C0,code,alLoadParam
