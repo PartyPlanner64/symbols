@@ -10,9 +10,12 @@
 800171EC,code,dmarelated?,A0=ram_addr,A1=larger_ram_addr,A2=size
 8001745C,code,DMA,A0=rom_addr,A1=ram_addr,A2=size
 80017528,code,LoadFormFile,A0=main_fs_DDDDFFFF,A1=flags
+800175C0,code,LoadOverlay,A0=overlay_index
+800177F4,code,ReadImgPackand?
 8001B290,code,ParseObjType10,Parse OBJ1 type 0x10
 8001C2E8,code,FindFormEntry,Finds a FORM entry. A0=entry type (like "OBJ1")
 8001D934,code,Convert3DTo2D,A0=3 point vector,returns 2D point within (0,0) [upper left] to (320,240) [lower right]
+8001E00C,code,ImgPackrelated?,A0=*imgpack,A1=size?
 80023C14,code,LoadFormBinary,A0=form_addr,A1=flags
 8003B680,code,MakePermHeap,A0=heap_addr,A1=heap_len,calls MakeHeap and persists pointer in 800D6030
 8003B6A4,code,MallocPerm,A0=size,mallocs in the permanent heap
@@ -70,7 +73,9 @@
 80059B00,code,Ensure16,A0=num,0xFFF0 & (A0 + 0x1F),seems to pad number up
 8005B75C,code,StringLen?,A0=string_num,A1=?table?
 8005B7E8,code,LoadString?,A0=string_num,returns pointer
+8005B838,code,FreeString,A0=*str,frees string from LoadString
 8005DC28,code,CreateProcess
+80062088,code,ReadFromRom?,A0=rom_start,A1=ram_dest,A2=len,used by LoadOverlay
 800622BC,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str (consider using ParsePrintf)
 80063550,code,RunProcess?,event code executes as a result of this
 80063550,code,SleepProcess
@@ -98,10 +103,13 @@
 800815F0,code,__leoLba_to_phys
 80081994,code,LeoReadDiskID
 800819F4,code,LeoReadWrite
-800825C4,code,osLeoDiskInit
+80081A80,code,leorelated?
+80081CC0,code,leorelated?
+800825C0,code,osLeoDiskInit
 8008265C,code,__osDiskHandle
 80082660,code,__LeoDiskHandle
 800827C0,code,LeoDriveExist
+80083E60,code,leorelated?
 800855B0,code,sqrtf,of F0 and F12
 800855C0,code,cosf
 80085710,code,guLookAt,Calculate a 'lookat' view matrix.
@@ -156,7 +164,7 @@
 800890C0,code,__osSetTimerIntr
 80089120,code,__osInsertTimer
 80089230,code,osVirtualToPhysical,Translates between CPU virtual address/physical memory address
-800892A0,code,alBnkfNew
+800892A0,code,alBnkfNew,Initializes a bank file
 80089334,code,alSeqFileNew
 80089374,code,__bnkf_o_0098
 80089420,code,__bnkf_o_0118
@@ -164,7 +172,7 @@
 8008950C,code,__bnkf_o_0258
 80089570,code,alEvtqFlushType
 800895EC,code,alEvtqNextEvent
-80089620,code,alEvtqFlush
+80089620,code,alEvtqFlushstring_num,returns pointer
 80089684,code,alEvtqPostEvent
 80089698,code,alEvtqPostEvent
 800897A4,code,alEvtqNextEvent
@@ -255,6 +263,7 @@
 8008C010,code,__osPiRelAccess
 8008C040,code,bcopy
 8008C360,code,bzero,Writes all zeroes,A0=ram_addr,A1=len_to_clear,may need to be 0x20 divisible,may do other stuff?
+8008C400,code,strchr
 8008C45C,code,memcpy
 8008C438,code,strlen
 8008C490,code,sprintf,A0=out_addr,A1=in_addr,A2+stack=args
@@ -458,7 +467,7 @@
 800ED5C8,u16,remaining_turns,Remaining turns
 800ED5DC,u16,current_player_index,Player who's turn is active
 800ED5E0,u16,current_space_index?
-800F09F6,u16,scene,Current scene
+800F09F4,u32,scene,Current scene
 800F2CDC,u16,hidden_block_space_index,Space index of hidden block
 800F32B4,u8,p1_char,Player 1 character
 800F32B8,u16,p1_coins,Player 1 coin count

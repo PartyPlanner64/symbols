@@ -5,9 +5,22 @@
 80000318,data,osMemSize,Size of RDRAM
 80009C10,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80009E6C,code,FreeMainFS,Free's an allocated MainFS file pointer
+8000B838,code,LoadGraphics
+8000BBD4,code,SetSpriteCenter?,A0=X,A1=Y
+8000BE5C,code,ScaleSprite?,A0=X,A1=Y
+8000BFEC,code,InitEspriteSlot
+8000C184,code,CloseEsprite
+80012220,code,InitCameras
+80047160,code,InitObjSys
+80047EA0,code,InitProcess
+80048008,code,EndProcess
+80048128,code,LoadOverlay,A0=num,A1=entrypoint,A2=?
 8004F010,code,SleepProcess
-8004F074,code,SleepVProcess
+8004F074,code,SleepVProcess,Sleep 1 frame
+80055670,code,FreeGraphics?
 80055810,code,ImgPackParse
+80062050,code,InitFadeout
+800620BC,code,GetFadeStatus
 8006CFF0,code,alSeqpGetChlVol
 8006D010,code,alSeqpGetChlFXMix
 8006D030,code,alSeqpGetChlPan
