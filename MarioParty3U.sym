@@ -21,6 +21,8 @@
 80055810,code,ImgPackParse
 80062050,code,InitFadeout
 800620BC,code,GetFadeStatus
+80066500,code,setjmp
+80066564,code,longjmp
 8006CFF0,code,alSeqpGetChlVol
 8006D010,code,alSeqpGetChlFXMix
 8006D030,code,alSeqpGetChlPan
