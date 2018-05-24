@@ -81,6 +81,7 @@
 80063550,code,SleepProcess
 800635B4,code,SleepVProcess
 8006D7D8,code,LoadStringIntoWindow,A0=window_id,A1=string_id
+8006E070,code,LoadTextSpeedSetting?,A0=window_id,A1=0?
 8007F54C,code,HVQDecodeInner,HVQ image decoder
 8007FD44,code,__leoCommand
 800809D0,code,__leoAnalize_asic_status
