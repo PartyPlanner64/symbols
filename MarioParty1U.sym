@@ -75,6 +75,7 @@
 8005B7E8,code,LoadString?,A0=string_num,returns pointer
 8005B838,code,FreeString,A0=*str,frees string from LoadString
 8005DC28,code,CreateProcess
+800602AC,code,PlaySound,A0=index
 80062088,code,ReadFromRom?,A0=rom_start,A1=ram_dest,A2=len,used by LoadOverlay
 800622BC,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str (consider using ParsePrintf)
 80063550,code,RunProcess?,event code executes as a result of this
