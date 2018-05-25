@@ -414,7 +414,10 @@
 800D11C9,u8,p4_item2,Player 4 second item
 800D11CA,u8,p4_item3,Player 4 third item
 800D41C0,u32,cur_player_spaces_remaining
+800EB160,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
+800EBCC8,code,GetCurrentSpaceIndex
+800EC8EC,code,stringwindowshow?,A1=DDSS dir and string index
 800F2130,code,GetCurrentPlayerIndex
 800F213C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 800F217C,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
