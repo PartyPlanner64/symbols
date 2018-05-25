@@ -10,11 +10,14 @@
 8000BE5C,code,ScaleSprite?,A0=X,A1=Y
 8000BFEC,code,InitEspriteSlot
 8000C184,code,CloseEsprite
-80012220,code,InitCameras
+80012220,code,InitCameras,A0=num_cameras
+8001FE20,code,InitAnimations,A0=1
+80035864,code,MallocPerm,A0=size,mallocs in the permanent heap
 80047160,code,InitObjSys
 80047EA0,code,InitProcess
 80048008,code,EndProcess
 80048128,code,LoadOverlay,A0=num,A1=entrypoint,A2=?
+8004DD7C,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str
 8004F010,code,SleepProcess
 8004F074,code,SleepVProcess,Sleep 1 frame
 80055670,code,FreeGraphics?
@@ -394,6 +397,7 @@
 80094720,code,gspL3DEX2_fifoTextStart?
 800954C0,data,n_aspMainDataStart?
 80095770,code,n_aspMainTextStart?
+800CB8A4,u32,debug_font_color,Used with DrawDebugText
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
 800CE202,u16,current_scene
