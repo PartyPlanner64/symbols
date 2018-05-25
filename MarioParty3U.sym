@@ -423,5 +423,5 @@
 800F217C,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
 800F2198,code,PlayerIsCPU,A0=player_index
 800F21C0,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
-800F2230,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
+800F2230,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800F2260,code,playerrelated?
