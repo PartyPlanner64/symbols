@@ -397,5 +397,28 @@
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
 800CE202,u16,current_scene
+800D1112,u16,p1_coins,Player 1 coin count
+800D1120,u8,p1_item1,Player 1 first item
+800D1121,u8,p1_item2,Player 1 second item
+800D1122,u8,p1_item3,Player 1 third item
+800D114A,u16,p2_coins,Player 2 coin count
+800D1158,u8,p2_item1,Player 2 first item
+800D1159,u8,p2_item2,Player 2 second item
+800D115A,u8,p2_item3,Player 2 third item
+800D1182,u16,p3_coins,Player 3 coin count
+800D1190,u8,p3_item1,Player 3 first item
+800D1191,u8,p3_item2,Player 3 second item
+800D1192,u8,p3_item3,Player 3 third item
+800D11BA,u16,p4_coins,Player 4 coin count
+800D11C8,u8,p4_item1,Player 4 first item
+800D11C9,u8,p4_item2,Player 4 second item
+800D11CA,u8,p4_item3,Player 4 third item
 800D41C0,u32,cur_player_spaces_remaining
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
+800F2130,code,GetCurrentPlayerIndex
+800F213C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
+800F217C,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
+800F2198,code,PlayerIsCPU,A0=player_index
+800F21C0,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
+800F2230,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
+800F2260,code,playerrelated?
