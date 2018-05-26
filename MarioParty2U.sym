@@ -6,6 +6,12 @@
 80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
 8005568C,code,EventTableHydrate,Moves event table data into the space data
+8005DC30,code,GetCurrentPlayerIndex
+8005DC3C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
+8005DC84,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
+8005DCA0,code,PlayerIsCPU,A0=player_index
+8005DCC8,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
+8005DD38,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800DEFD0,data,perm_heap_addr,Permanent heap pointer
 800DEFE0,data,temp_heap_addr,Temporary heap address
 80092AF0,code,alSynStartVoiceParams
