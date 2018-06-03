@@ -17,6 +17,7 @@
 80047EA0,code,InitProcess
 80048008,code,EndProcess
 80048128,code,LoadOverlay,A0=num,A1=entrypoint,A2=?
+8004AA88,code,PlaySound,A0=index
 8004DD7C,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str
 8004F010,code,SleepProcess
 8004F074,code,SleepVProcess,Sleep 1 frame
@@ -425,7 +426,10 @@
 800EB160,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
 800EBCC8,code,GetCurrentSpaceIndex
-800EC8EC,code,stringwindowshow?,A1=DDSS dir and string index
+800EC70C,code,stringwindowshowinner?,A1=DDSS dir and string index
+800EC8EC,code,stringwindowshow?,A0=character_index,A1=DDSS dir and string index or address,A2...rest=string format
+800EC92C,code,stringwindowshow?,A1=DDSS dir and string index
+800EC980,code,stringwindowshow?,A1=DDSS dir and string index
 800F2130,code,GetCurrentPlayerIndex
 800F213C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 800F217C,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
