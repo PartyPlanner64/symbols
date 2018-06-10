@@ -24,6 +24,7 @@
 8003B774,code,MallocTemp,A0=size,mallocs in the temporary heap
 8003B798,code,FreeTemp,A0=addr,frees in the temp heap, really an alias for normal free
 8003C14C,code,DirectionPrompt,Prompts player to choose path at branch
+8003E81C,code,changeanimation?,A0=playerstruct[0x20],A1=-1?,A2=animation?
 80049E70,code,HVQBGInstantiate?,A0=rom_hvq_table,A1=0x45?,A2=4?
 80049F4C,code,HVQBGInstantiate?,A0=hvqdir?
 8004A394,code,HVQDecode,HVQ image decoder
@@ -51,7 +52,7 @@
 80052B20,code,PlayerIsCPU,A0=player_index
 80052B48,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
 80052BB8,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
-80052BE8,code,playerrelated?,A0=player_index called each time player animation changes on board
+80052BE8,code,changerplayeranimation?,A0=player_index,A1: -1 stand, 0 walk, 1 run, 2 hit dice, 3 long jump, 4 dazed,A2=0 or 2?
 80052C44,code,playerrelated?,called when player hits dice
 80052CCC,code,playerrelated?
 80052D34,code,playerrelated?
