@@ -6,6 +6,7 @@
 80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
 8005568C,code,EventTableHydrate,Moves event table data into the space data
+80056368,code,stringwindowshow?,A0=character_index,A1=string index,A2 onward: string format options
 8005DC30,code,GetCurrentPlayerIndex
 8005DC3C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 8005DC84,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
