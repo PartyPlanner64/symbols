@@ -446,8 +446,9 @@
 800EC8EC,code,stringwindowshow?,A0=character_index,A1=DDSS dir and string index or address,A2...rest=string format
 800EC92C,code,stringwindowshow?,A1=DDSS dir and string index
 800EC980,code,stringwindowshow?,A1=DDSS dir and string index
-800ED998,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
-800ED9F8,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
+800ED91C,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
+800ED998,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
+800ED9F8,code,SetPrevChainAndSpace?,A0=player_index,A1=chain,A2=space,is this for reverse somehow?
 800F2130,code,GetCurrentPlayerIndex
 800F213C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 800F217C,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
