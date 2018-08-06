@@ -5,6 +5,7 @@
 80000318,data,osMemSize,Size of RDRAM
 80009C10,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80009E6C,code,FreeMainFS,Free's an allocated MainFS file pointer
+8000B16C,code,GetRandomByte
 8000B838,code,LoadGraphics
 8000BBD4,code,SetSpriteCenter?,A0=X,A1=Y
 8000BE5C,code,ScaleSprite?,A0=X,A1=Y
@@ -458,4 +459,4 @@
 800F21C0,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
 800F2230,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800F2260,code,playerrelated?
-800F5D44,code,AdjustPlayerCoinsSlowly,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds over time
+800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
