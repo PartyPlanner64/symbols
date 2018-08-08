@@ -443,6 +443,7 @@
 800D41C0,u32,cur_player_spaces_remaining
 800E1F48,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
 800EB160,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
+800EB184,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
 800EBCC8,code,GetCurrentSpaceIndex
 800EC70C,code,stringwindowshowinner?,A1=DDSS dir and string index
