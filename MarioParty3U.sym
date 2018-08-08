@@ -463,3 +463,7 @@
 800F2230,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800F2260,code,playerrelated?
 800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
+80105210,u16,?
+80105212,u16,?
+80105214,u32,hydrated_space_data
+80105218,u32,hydrated_chains
