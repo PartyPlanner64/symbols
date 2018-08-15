@@ -453,3 +453,9 @@
 800FD36A,u16,p4_stars,Player 4 star count
 800FD375,u8,p4_item,Player 4 item
 800FD376,u16,p4_turn_status,Player 4 turn status
+800E18D0,u16,num_board_spaces
+800E18D2,u16,num_chains
+800E18D4,u32,hydrated_space_data
+800E18D8,u32,hydrated_chains
+800E1940,data,arrow_angles,f32[8]
+800E1960,u32,num_arrow_angles
