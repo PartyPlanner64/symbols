@@ -5,8 +5,12 @@
 80000318,data,osMemSize,Size of RDRAM
 80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
+80042BE0,code,spaceanglehelper?
+80054268,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
+80054B8C,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 8005568C,code,EventTableHydrate,Moves event table data into the space data
 80056368,code,stringwindowshow?,A0=character_index,A1=string index,A2 onward: string format options
+80056658,code,spaceanglehelper?
 8005DC30,code,GetCurrentPlayerIndex
 8005DC3C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 8005DC84,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
