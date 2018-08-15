@@ -445,7 +445,7 @@
 800D8790,code,RadiansToDegrees?,A0=xyz_ptr
 800D88E8,code,spaceanglehelper?,A0=xyz_ptr,if any of xyz are non-zero, puts 1 into z?
 800E1F48,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
-800EA660,code,AddArrowAngle,F0=degree_rot_of_arrow
+800EA660,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
 800EB160,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 800EB184,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 800EB1B0,code,GetChainLength,A0=chain_index
@@ -468,8 +468,8 @@
 800F2230,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800F2260,code,playerrelated?
 800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
-80105210,u16,?
-80105212,u16,?
+80105210,u16,num_board_spaces
+80105212,u16,num_chains
 80105214,u32,hydrated_space_data
 80105218,u32,hydrated_chains
 80105290,data,arrow_angles,f32[8]
