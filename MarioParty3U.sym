@@ -387,6 +387,7 @@
 80087F00,code,__divdi3
 80088070,code,__udivdi3
 80088090,code,__umoddi3
+80089AB0,code,midpoint,A0=output_xyz,A1=xyz_ptr,A2=xyz_ptr
 8008F0F0,code,rspbootTextStart?
 8008F1C0,data,gspF3DEX2_fifoDataStart?
 8008F5E0,code,gspF3DEX2_fifoTextStart?
@@ -441,7 +442,10 @@
 800D11C9,u8,p4_item2,Player 4 second item
 800D11CA,u8,p4_item3,Player 4 third item
 800D41C0,u32,cur_player_spaces_remaining
+800D8790,code,RadiansToDegrees?,A0=xyz_ptr
+800D88E8,code,spaceanglehelper?,A0=xyz_ptr,if any of xyz are non-zero, puts 1 into z?
 800E1F48,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
+800EA660,code,AddArrowAngle,F0=degree_rot_of_arrow
 800EB160,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 800EB184,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 800EB1B0,code,GetChainLength,A0=chain_index
@@ -452,6 +456,7 @@
 800EC8EC,code,stringwindowshow?,A0=character_index,A1=DDSS dir and string index or address,A2...rest=string format
 800EC92C,code,stringwindowshow?,A1=DDSS dir and string index
 800EC980,code,stringwindowshow?,A1=DDSS dir and string index
+800ECB58,code,GetAngleBetweenSpaces?,A0=space_1_data[0x8],A1=space_2_data[0x8],A2=output_xyz_ptr,returns radians?
 800ED91C,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
 800ED998,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
 800ED9F8,code,SetPrevChainAndSpace?,A0=player_index,A1=chain,A2=space,is this for reverse somehow?
@@ -467,3 +472,5 @@
 80105212,u16,?
 80105214,u32,hydrated_space_data
 80105218,u32,hydrated_chains
+80105290,data,arrow_angles,f32[8]
+80105290,u32,num_arrow_angles
