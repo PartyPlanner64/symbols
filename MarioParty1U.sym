@@ -68,6 +68,7 @@
 80053064,code,SetD8380?
 800532E0,code,ClearD8380andD8394?
 80056A08,code,SetupDKBoard?,A1=boarddeffile=69
+80059798,code,IsBoardFeatureDisabled,A0=0xD:bowser,0xE:koopa troopa,0xF:boo 
 80059880,code,MakeHeap,A0=addr,A1=size,instantiates the heap by writing initial header
 800598A0,code,Malloc,A0=heap pointer (main or temp),A1=size
 8005992C,code,Free,A0=allocated heap pointer
