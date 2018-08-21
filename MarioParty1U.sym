@@ -456,6 +456,7 @@
 8009A090,code,osYieldThread
 8009A0E0,code,alFilterNew
 8009A100,code,__osSpDeviceBusy
+800C4350,data,model_info
 800C5490,data,character_anim_pointers?
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
 800D12F0,data,main_fs_rom_location
