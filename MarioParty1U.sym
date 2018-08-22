@@ -456,6 +456,7 @@
 8009A090,code,osYieldThread
 8009A0E0,code,alFilterNew
 8009A100,code,__osSpDeviceBusy
+800A0D50,code,changemodelposition?,A0=old_coords,A1=new_coords
 800C1C74,data,dma_table
 800C4350,data,model_info
 800C5490,data,character_anim_pointers?
