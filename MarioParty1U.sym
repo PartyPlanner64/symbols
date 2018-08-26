@@ -71,6 +71,7 @@
 80053064,code,SetD8380?
 800532E0,code,ClearD8380andD8394?
 80056A08,code,SetupDKBoard?,A1=boarddeffile=69
+80058750,code,ExecBoardScene,A0=board_fns,A1=state,
 80059798,code,IsBoardFeatureDisabled,A0=0xD:bowser,0xE:koopa troopa,0xF:boo
 800597DC,code,SetBoardFeatureEnabled,A0=feature,or is it set disabled?
 8005982C,code,SetBoardFeatureDisabled,A0=feature,or is it set enabled?
@@ -462,6 +463,7 @@
 800C1C74,data,dma_table
 800C4350,data,model_info
 800C5490,data,character_anim_pointers?
+800C597A,u16,cur_board_scene_state,Determines how the board scene starts up when (re)loaded
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
 800D12F0,data,main_fs_rom_location
 800D12F4,data,main_fs_dir_count,Number of directories in main filesystem
