@@ -10,6 +10,7 @@
 800171EC,code,dmarelated?,A0=ram_addr,A1=larger_ram_addr,A2=size
 8001745C,code,DMA,A0=rom_addr,A1=ram_addr,A2=size
 80017528,code,LoadFormFile,A0=main_fs_DDDDFFFF,A1=flags
+8001758C,code,GetRandomByte
 800175C0,code,LoadOverlay,A0=overlay_index
 800177F4,code,ReadImgPackand?
 8001B290,code,ParseObjType10,Parse OBJ1 type 0x10
