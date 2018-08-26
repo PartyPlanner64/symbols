@@ -39,6 +39,7 @@
 8004C968,code,ExecuteEventForSpace?,does jalr to event code pointer or creates process
 8004CB2C,code,SetCurrentSpaceIndex?,A0=space_index
 8004CB34,code,GetCurrentSpaceIndex?
+8004CE70,code,SwapPlayerLocationData,A0=player_index_1,A1=player_index_2
 8004CF44,code,SetPlayerBlue,Sets the player's turn state blue
 8004CF4C,code,SetPlayerRed,Sets the player's turn state red
 8004CF54,code,SetPlayerGreen,Sets the player's turn state green
