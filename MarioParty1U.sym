@@ -462,6 +462,7 @@
 8009A100,code,__osSpDeviceBusy
 800A0D50,code,changemodelposition?,A0=old_coords,A1=new_coords
 800C1C74,data,dma_table
+800C2FF4,data,rng_seed
 800C4350,data,model_info
 800C5490,data,character_anim_pointers?
 800C597A,u16,cur_board_scene_state,Determines how the board scene starts up when (re)loaded
