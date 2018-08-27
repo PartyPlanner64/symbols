@@ -503,6 +503,7 @@
 800F32C6,u8,p1_poisoned,Player 1 poisoned boolean
 800F32C7,u8,p1_turn_status,Color based on type of space landed on
 800F32D4,u16,p1_total_minigame_coins,Player 1 total Mini-Game coins collected
+800F32D6,u16,p1_total_coins,Player 1 total coins collected
 800F32D8,u8,p1_total_happening_spaces,Player 1 total number of Happening Spaces landed on
 800F32D9,u8,p1_total_red_spaces,Player 1 total number of red spaces landed on
 800F32DA,u8,p1_total_blue_spaces,Player 1 total number of blue spaces landed on
@@ -522,6 +523,8 @@
 800F32F4,u16,p2_next_space_index,Player 2 next space index
 800F32F6,u8,p2_poisoned,Player 2 poisoned boolean
 800F32F7,u8,p2_turn_status,Color based on type of spaced landed on
+800F3304,u16,p2_total_minigame_coins,Player 2 total Mini-Game coins collected
+800F3306,u16,p2_total_coins,Player 2 total coins collected
 800F3308,u8,p2_total_happening_spaces,Player 2 total number of Happening spaces landed on
 800F3309,u8,p2_total_red_spaces,Player 2 total number of red spaces landed on
 800F330A,u8,p2_total_blue_spaces,Player 2 total number of blue spaces landed on
@@ -541,6 +544,8 @@
 800F3324,u16,p3_next_space_index,Player 3 next space index
 800F3326,u8,p3_poisoned,Player 3 poisoned boolean
 800F3327,u8,p3_turn_status,Color based on type of space landed on
+800F3334,u16,p3_total_minigame_coins,Player 3 total Mini-Game coins collected
+800F3336,u16,p3_total_coins,Player 3 total coins collected
 800F3338,u8,p3_total_happening_spaces,Player 3 total number of Happening spaces landed on
 800F3339,u8,p3_total_red_spaces,Player 3 total number of red spaces landed on
 800F333A,u8,p3_total_blue_spaces,Player 3 total number of blue spaces landed on
@@ -560,6 +565,8 @@
 800F3354,u16,p4_next_space_index,Player 4 next space index
 800F3356,u8,p4_poisoned,Player 4 poisoned boolean
 800F3357,u8,p4_turn_status,Color based on type of space landed on
+800F3364,u16,p4_total_minigame_coins,Player 4 total Mini-Game coins collected
+800F3366,u16,p4_total_coins,Player 4 total coins collected
 800F3368,u8,p4_total_happening_spaces,Player 4 total number of Happening spaces landed on
 800F3369,u8,p4_total_red_spaces,Player 4 total number of red spaces landed on
 800F336A,u8,p4_total_blue_spaces,Player 4 total number of blue spaces landed on
