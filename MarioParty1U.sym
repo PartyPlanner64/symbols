@@ -490,6 +490,8 @@
 800ED5E0,u16,current_space_index?
 800F09F4,u32,scene,Current scene
 800F2CDC,u16,hidden_block_space_index,Space index of hidden block
+800F32B1,u8,p1_cpu_difficulty_1,Player 1 CPU difficulty
+800F32B2,u8,p1_cpu_difficulty_2,Player 1 CPU difficulty
 800F32B4,u8,p1_char,Player 1 character
 800F32B8,u16,p1_coins,Player 1 coin count
 800F32BA,s16,p1_minigame_coins,Player 1 coins in current Mini-Game
@@ -508,6 +510,8 @@
 800F32DC,u8,p1_total_chance_spaces,Player 1 total number of Chance Time spaces landed on
 800F32DD,u8,p1_total_mushroom_spaces,Player 1 total number of Mushroom spaces landed on
 800F32DE,u8,p1_total_bowser_spaces,Player 1 total number of Bowser spaces landed on
+800F32E1,u8,p2_cpu_difficulty_1,Player 2 CPU difficulty
+800F32E2,u8,p2_cpu_difficulty_2,Player 2 CPU difficulty
 800F32E4,u8,p2_char,Player 2 character
 800F32E8,u16,p2_coins,Player 2 coin count
 800F32EA,s16,p2_minigame_coins,Player 2 coins in current Mini-Game
@@ -525,6 +529,8 @@
 800F330C,u8,p2_total_chance_spaces,Player 2 total number of Chance Time spaces landed on
 800F330D,u8,p2_total_mushroom_spaces,Player 2 total number of Mushroom spaces landed on
 800F330E,u8,p2_total_bowser_spaces,Player 2 total number of Bowser spaces landed on
+800F3311,u8,p3_cpu_difficulty_1,Player 3 CPU difficulty
+800F3312,u8,p3_cpu_difficulty_2,Player 3 CPU difficulty
 800F3314,u8,p3_char,Player 3 character
 800F3318,u16,p3_coins,Player 3 coin count
 800F331A,s16,p3_minigame_coins,Player 3 coins in current Mini-Game
@@ -542,6 +548,8 @@
 800F333C,u8,p3_total_chance_spaces,Player 3 total number of Chance Time spaces landed on
 800F333D,u8,p3_total_mushroom_spaces,Player 3 total number of Mushroom spaces landed on
 800F333E,u8,p3_total_bowser_spaces,Player 3 total number of Bowser spaces landed on
+800F3341,u8,p3_cpu_difficulty_1,Player 3 CPU difficulty
+800F3342,u8,p3_cpu_difficulty_2,Player 3 CPU difficulty
 800F3344,u8,p4_char,Player 4 character
 800F3348,u16,p4_coins,Player 4 coin count
 800F334A,s16,p4_minigame_coins,Player 4 coins in current Mini-Game
