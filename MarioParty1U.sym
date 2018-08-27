@@ -44,6 +44,7 @@
 8004CF48,code,SetPlayerRed,Sets the player's turn state red
 8004CF50,code,SetPlayerGreen,Sets the player's turn state green
 8004CF70,code,GetSumOfPlayerStars,sums the star count of all players
+8004CFC0,code,randomchanceofXlikelihood?,A0=percent chance the call returns true
 8004D008,code,GetTurnsElapsed,Subtracts remaining turns from total turns
 8004D7D8,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
 8004D844,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
