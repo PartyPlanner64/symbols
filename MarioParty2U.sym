@@ -19,6 +19,7 @@
 8005DCA0,code,PlayerIsCPU,A0=player_index
 8005DCC8,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
 8005DD38,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
+800614B4,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 800DEFD0,data,perm_heap_addr,Permanent heap pointer
 800DEFE0,data,temp_heap_addr,Temporary heap address
 80092AF0,code,alSynStartVoiceParams
