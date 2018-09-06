@@ -26,6 +26,7 @@
 8003B798,code,FreeTemp,A0=addr,frees in the temp heap, really an alias for normal free
 8003C14C,code,DirectionPrompt,Prompts player to choose path at branch
 8003E81C,code,changeanimation?,A0=playerstruct[0x20],A1=-1?,A2=animation?
+80045778,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
 80049E70,code,HVQBGInstantiate?,A0=rom_hvq_table,A1=0x45?,A2=4?
 80049F4C,code,HVQBGInstantiate?,A0=hvqdir?
 8004A394,code,HVQDecode,HVQ image decoder
