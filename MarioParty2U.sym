@@ -8,6 +8,7 @@
 8001D190,code,interpretFORM?
 80038F0C,code,interpretMTNX?,A0=mtnx_pointer
 80042BE0,code,spaceanglehelper?
+8004CA34,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
 80054268,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
 80054B8C,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 8005568C,code,EventTableHydrate,Moves event table data into the space data
