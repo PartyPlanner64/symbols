@@ -530,6 +530,7 @@
 800C597A,u16,cur_board_scene_state,Determines how the board scene starts up when (re)loaded
 800CAAC0,data,jt_ai_logic,Jump table for 8003E9B0
 800CB060,data,jt_spacetype_to_turneffect,Jump table for space type to turn effect
+800CEA8C,data,__ALSndPlayer*sndp
 800D12F0,data,main_fs_rom_location
 800D12F4,data,main_fs_dir_count,Number of directories in main filesystem
 800D1300,data,main_fs_cur_dir_file_count,Count of files in directory being accessed
