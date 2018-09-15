@@ -26,10 +26,58 @@
 8003B798,code,FreeTemp,A0=addr,frees in the temp heap, really an alias for normal free
 8003C14C,code,DirectionPrompt,Prompts player to choose path at branch
 8003E81C,code,changeanimation?,A0=playerstruct[0x20],A1=-1?,A2=animation?
-80045778,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
+80045778,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui\
+80049904,code,?
+800499CC,code,?
+80049E60,code,?
 80049E70,code,HVQBGInstantiate?,A0=rom_hvq_table,A1=0x45?,A2=4?
+80049F0C,code,?
 80049F4C,code,HVQBGInstantiate?,A0=hvqdir?
+8004A140,code,?
+8004A19C,code,?
+8004A1B0,code,?
+8004A2E8,code,?
+8004A31C,code,?
 8004A394,code,HVQDecode,HVQ image decoder
+8004A41C,code,?
+8004A520,code,?
+8004A56C,code,?
+8004A5BC,code,?
+8004A684,code,?
+8004A6F8,code,?
+8004A73C,code,?
+8004A7A4,code,?
+8004A7DC,code,?
+8004A814,code,?
+8004A844,code,?
+8004A868,code,?
+8004A890,code,?
+8004A950,code,?
+8004AAA8,code,?
+8004ACEC,code,?
+8004AFFC,code,?
+8004B1B8,code,?
+8004B1EC,code,?
+8004B208,code,?
+8004B5C4,code,?
+8004B5D0,code,?
+8004B5DC,code,?
+8004B61C,code,?
+8004B68C,code,?
+8004B6D8,code,?
+8004B730,code,?
+8004B7F8,code,?
+8004B804,code,?
+8004B838,code,?
+8004B844,code,?
+8004B850,code,?
+8004B860,code,?
+8004B92C,code,?
+8004B994,code,?
+8004B9B8,code,?
+8004B9D4,code,?
+8004BA04,code,?
+8004BDEC,code,?
 8004BDFC,code,BoardDefInit?,A0=fsdir,A1=fsfile
 8004C1EC,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 8004C204,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
