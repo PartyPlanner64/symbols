@@ -145,7 +145,16 @@
 800635B4,code,SleepVProcess
 8006D7D8,code,LoadStringIntoWindow,A0=window_id,A1=string_id
 8006E070,code,SetTextCharsPerFrame,A0=window_id,A1=chars_per_sec (usually 0, default is 1)
+8007C160,code,?
+8007CA90,code,?
+8007CE28,code,?
+8007DA48,code,?
+8007DC58,code,?
+8007EE54,code,?
+8007F2FC,code,?
 8007F54C,code,HVQDecodeInner,HVQ image decoder
+8007FAC0,code,?
+8007FB70,code,? begin .o
 8007FD44,code,__leoCommand
 800809D0,code,__leoAnalize_asic_status
 80080E70,code,__leoSend_asic_cmd_w
