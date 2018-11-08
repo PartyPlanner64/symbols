@@ -8,6 +8,12 @@
 80018AFC,code,GetRandomByte
 8001D190,code,interpretFORM?
 80038F0C,code,interpretMTNX?,A0=mtnx_pointer
+80040D80,code,MakePermHeap,A0=heap_addr,A1=heap_len,calls MakeHeap and persists pointer
+80040DA4,code,MallocPerm,A0=size,mallocs in the permanent heap
+80040DC8,code,FreePerm,A0=addr,frees in the permanent heap
+80040E50,code,MakeTempHeap,A0=heap_addr,A1=heap_len,calls MakeHeap and persists pointer
+80040E74,code,MallocTemp,A0=size,mallocs in the temporary heap
+80040E98,code,FreeTemp,A0=addr,frees in the temp heap
 80042BE0,code,spaceanglehelper?
 8004CA34,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
 80054268,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
