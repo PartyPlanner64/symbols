@@ -24,6 +24,9 @@
 8005DD38,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800614B4,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 80068328,code,IsBoardFeatureDisabled?
+80068460,code,MakeHeap,A0=addr,A1=size,instantiates the heap by writing initial header
+80068480,code,Malloc,A0=heap pointer (main or temp),A1=size
+8006850C,code,Free,A0=allocated heap pointer
 8007D9E0,code,SleepProcess
 8007DA44,code,SleepVProcess
 800DEFD0,data,perm_heap_addr,Permanent heap pointer
