@@ -440,6 +440,8 @@
 800BDBC0,code,gspL3DEX2_fifoTextStart?
 800BE960,data,aspMainDataStart?
 800BEC20,data,aspMainTextStart?
+800DEFD0,data,perm_heap_addr,Address of permanent heap
+800DEFE0,data,temp_heap_addr,Address of temporary heap
 800E18D0,u16,num_board_spaces
 800E18D2,u16,num_chains
 800E18D4,u32,hydrated_space_data
