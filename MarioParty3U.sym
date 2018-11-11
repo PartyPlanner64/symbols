@@ -411,6 +411,7 @@
 800D1118,u8,p1_cur_space_index,Player 1 current space index
 800D1119,u8,p1_next_chain_index,Player 1 next chain index
 800D111A,u8,p1_next_space_index,Player 1 next space index
+800D111F,u8,p1_status_flags,0x80 (reset effect you land), 0x40 (apply a bowser head), 0x20 (bowser slow curse head), 0x1 (move in reverse)
 800D1120,u8,p1_item1,Player 1 first item
 800D1121,u8,p1_item2,Player 1 second item
 800D1122,u8,p1_item3,Player 1 third item
@@ -420,6 +421,7 @@
 800D1150,u8,p2_cur_space_index,Player 2 current space index
 800D1151,u8,p2_next_chain_index,Player 2 next chain index
 800D1152,u8,p2_next_space_index,Player 2 next space index
+800D1157,u8,p2_status_flags,see p1 notes
 800D1158,u8,p2_item1,Player 2 first item
 800D1159,u8,p2_item2,Player 2 second item
 800D115A,u8,p2_item3,Player 2 third item
@@ -429,6 +431,7 @@
 800D1188,u8,p3_cur_space_index,Player 3 current space index
 800D1189,u8,p3_next_chain_index,Player 3 next chain index
 800D118A,u8,p3_next_space_index,Player 3 next space index
+800D118F,u8,p3_status_flags,see p1 notes
 800D1190,u8,p3_item1,Player 3 first item
 800D1191,u8,p3_item2,Player 3 second item
 800D1192,u8,p3_item3,Player 3 third item
@@ -438,6 +441,7 @@
 800D11C0,u8,p4_cur_space_index,Player 4 current space index
 800D11C1,u8,p4_next_chain_index,Player 4 next chain index
 800D11C2,u8,p4_next_space_index,Player 4 next space index
+800D11C7,u8,p4_status_flags,see p1 notes
 800D11C8,u8,p4_item1,Player 4 first item
 800D11C9,u8,p4_item2,Player 4 second item
 800D11CA,u8,p4_item3,Player 4 third item
