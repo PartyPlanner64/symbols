@@ -13,8 +13,15 @@
 8001758C,code,GetRandomByte
 800175C0,code,LoadOverlay,A0=overlay_index
 800177F4,code,ReadImgPackand?
+80018910,code,InitSprite,A0=u32 file_id DDDDFFFF
+80018C50,code,ShowBasicSprite,A0=u16 basic_sprite_index,ret void
+80018C7C,code,HideBasicSprite,A0=u16 basic_sprite_index,ret void
+80018CD0,code,SetBasicSpritePos,A0=u16 basic_sprite_index,A1=u16 x_pos,A2=u16 y_pos
+80018F18,code,SetBasicSpriteSize,A0=u16 basic_sprite_index,A1=float x_size,A2=float y_size
+80019060,code,InitBasicSprite,A0=short sprite_index,A1=int unk,A2=int num_subsprites,ret u16
 8001B290,code,ParseObjType10,Parse OBJ1 type 0x10
 8001C2E8,code,FindFormEntry,Finds a FORM entry. A0=entry type (like "OBJ1")
+8001D240,code,InitCameras,A0=int cameras count
 8001D934,code,Convert3DTo2D,A0=3 point vector,returns 2D point within (0,0) [upper left] to (320,240) [lower right]
 8001E00C,code,ImgPackrelated?,A0=*imgpack,A1=size?
 80023C14,code,LoadFormBinary,A0=form_addr,A1=flags
@@ -136,7 +143,8 @@
 8005B75C,code,StringLen?,A0=string_num,A1=?table?
 8005B7E8,code,LoadString?,A0=string_num,returns pointer
 8005B838,code,FreeString,A0=*str,frees string from LoadString
-8005DC28,code,InitProcess
+8005CF30,code,InitObjectSystem,A0=int max_objects,A1=int max_processes,ret void
+8005DC28,code,InitProcess,A0=fn,A1=int priority,A2=int stack_size,A3=int zero,ret void
 8005DD90,code,EndProcess
 800602AC,code,PlaySound,A0=index
 80062088,code,ReadFromRom?,A0=rom_start,A1=ram_dest,A2=len,used by LoadOverlay
