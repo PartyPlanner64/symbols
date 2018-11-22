@@ -93,8 +93,8 @@
 8004C48C,code,SetSpaceType,A0=space_index,A1=space_type
 8004C900,code,EventTableHydrate,Moves event table data into the space data
 8004C968,code,ExecuteEventForSpace?,does jalr to event code pointer or creates process
-8004CB2C,code,SetCurrentSpaceIndex?,A0=space_index
-8004CB34,code,GetCurrentSpaceIndex?
+8004CB2C,code,SetCurrentSpaceIndex,A0=space_index
+8004CB38,code,GetCurrentSpaceIndex
 8004CE70,code,SwapPlayerLocationData,A0=player_index_1,A1=player_index_2
 8004CF40,code,SetPlayerBlue,Sets the player's turn state blue
 8004CF48,code,SetPlayerRed,Sets the player's turn state red
