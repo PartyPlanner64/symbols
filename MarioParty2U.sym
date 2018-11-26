@@ -22,6 +22,7 @@
 8005568C,code,EventTableHydrate,Moves event table data into the space data
 80056368,code,stringwindowshow?,A0=character_index,A1=string index,A2 onward: string format options
 80056658,code,spaceanglehelper?
+8005734C,code,SetNextChainAndSpace
 8005DC30,code,GetCurrentPlayerIndex
 8005DC3C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 8005DC84,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
