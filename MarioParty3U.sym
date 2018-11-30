@@ -405,6 +405,7 @@
 800CB8A4,u32,debug_font_color,Used with DrawDebugText
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
+800CD0B8,u8,dice_flags?,low bit is the cursed dice at least
 800CE202,u16,current_scene
 800D1112,u16,p1_coins,Player 1 coin count
 800D1116,u8,p1_stars,Player 1 star count
