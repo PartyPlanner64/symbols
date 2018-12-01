@@ -22,6 +22,8 @@
 8004DD7C,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str
 8004F010,code,SleepProcess
 8004F074,code,SleepVProcess,Sleep 1 frame
+8004F5A4,code,SaveFileEncode,A0=start addr of data to encode,A1=encrypt_table_addr,outputs to 0x800CD0C0
+8004FA4C,code,SaveFileDecode,A0=start addr of portion to decode,A1=dest_addr,A2=decode_table_addr
 80055670,code,FreeGraphics?
 80055810,code,ImgPackParse
 80061FE8,code,InitFadeIn,A0=fade_type,A1=duration
@@ -402,6 +404,7 @@
 800954C0,data,n_aspMainDataStart?
 80095770,code,n_aspMainTextStart?
 80097650,u32,rng_seed
+800A1D70,data,generic_save_data_decode_table,44 bytes
 800CB8A4,u32,debug_font_color,Used with DrawDebugText
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
