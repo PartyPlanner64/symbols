@@ -542,6 +542,7 @@
 800D12F0,data,main_fs_rom_location
 800D12F4,data,main_fs_dir_count,Number of directories in main filesystem
 800D1300,data,main_fs_cur_dir_file_count,Count of files in directory being accessed
+800D1B20,data,save_data_location?,0x200 bytes where EEPROM is read
 800D6030,data,perm_heap_addr,Address of permanent heap
 800D6040,data,temp_heap_addr,Address of temporary heap
 800D8108,data,space_data,pointer to space data parsed from board def file
@@ -556,6 +557,7 @@
 800ED5C8,u16,remaining_turns,Remaining turns
 800ED5DC,u16,current_player_index,Player who's turn is active
 800ED5E0,u16,current_space_index?
+800EE960,data,message_queue_pointer?,at least for EEPROM
 800F09F4,u32,scene,Current scene
 800F2CDC,u16,hidden_block_space_index,Space index of hidden block
 800F32B1,u8,p1_cpu_difficulty_1,Player 1 CPU difficulty
