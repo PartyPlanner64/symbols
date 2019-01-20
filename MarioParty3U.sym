@@ -412,6 +412,7 @@
 800CD0B6,data,flags?,large array of global flags
 800CD0BB,u8,dice_flag?,low bit is the cursed dice
 800CE202,u16,current_scene
+800D1108,data,player_structs
 800D1112,u16,p1_coins,Player 1 coin count
 800D1116,u8,p1_stars,Player 1 star count
 800D1117,u8,p1_cur_chain_index,Player 1 current chain index
