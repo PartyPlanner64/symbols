@@ -479,6 +479,10 @@
 800EC92C,code,stringwindowshow?,A1=DDSS dir and string index
 800EC980,code,stringwindowshow?,A1=DDSS dir and string index
 800ECB58,code,GetAngleBetweenSpaces?,A0=space_1_data[0x8],A1=space_2_data[0x8],A2=output_xyz_ptr,returns radians?
+800ECE1C,code,SetPlayerBlue,Sets the player's turn state blue
+800ECE24,code,SetPlayerRed,Sets the player's turn state red
+800ECE2C,code,SetPlayerGreen,Sets the player's turn state green
+800ECE4C,code,GetSumOfPlayerStars,sums the star count of all players
 800ECE9C,code,RNGPercentChance,A0=percent_chance,given a percent chance, returns true at that likelihood
 800ECEE4,code,GetTurnsElapsed
 800ED91C,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
