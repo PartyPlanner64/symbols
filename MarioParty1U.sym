@@ -553,6 +553,7 @@
 800ED144,u16,bank_stars,Stars in bank
 800ED148,u16,enabled_feature_flags
 800ED4B0,data,string_data_cache?,Something to do with windows or strings
+800ED550,u16,max_objects,set from InitObjectSystem
 800ED5C6,u16,total_turns,Total game turns
 800ED5C8,u16,elapsed_turns,Elapsed turns
 800ED5DC,u16,current_player_index,Player who's turn is active
