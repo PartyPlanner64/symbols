@@ -409,6 +409,7 @@
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
 800CD067,u8,current_player_index,Player who's turn is active
+800CD0B4,u16,bank_coin_total,Number of coins in bank
 800CD0B6,data,flags?,large array of global flags
 800CD0BB,u8,dice_flag?,low bit is the cursed dice
 800CE202,u16,current_scene
