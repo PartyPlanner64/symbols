@@ -490,7 +490,7 @@
 800ECEE4,code,GetTurnsElapsed
 800ED91C,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
 800ED998,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
-800ED9F8,code,SetPrevChainAndSpace?,A0=player_index,A1=chain,A2=space,is this for reverse somehow?
+800ED9F8,code,SetPrevChainAndSpace,A0=player_index,A1=chain,A2=space,is this for reverse somehow?
 800EFDF4,code,diceroll?,contains golden mushroom logic to give 20 coins on 2 match, 50 coins on 3 match?
 800F2130,code,GetCurrentPlayerIndex
 800F213C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
