@@ -481,7 +481,7 @@
 800EC8EC,code,stringwindowshow?,A0=character_index,A1=DDSS dir and string index or address,A2...rest=string format
 800EC92C,code,stringwindowshow?,A1=DDSS dir and string index
 800EC980,code,stringwindowshow?,A1=DDSS dir and string index
-800ECB58,code,GetAngleBetweenSpaces?,A0=space_1_data[0x8],A1=space_2_data[0x8],A2=output_xyz_ptr,returns radians?
+800ECB58,code,GetAngleBetweenSpaces,A0=space_1_data[0x8],A1=space_2_data[0x8],A2=output_xyz_ptr,returns radians?
 800ECE1C,code,SetPlayerBlue,Sets the player's turn state blue
 800ECE24,code,SetPlayerRed,Sets the player's turn state red
 800ECE2C,code,SetPlayerGreen,Sets the player's turn state green
