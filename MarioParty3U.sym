@@ -565,3 +565,4 @@
 80105218,u32,hydrated_chains
 80105290,data,arrow_angles,f32[8]
 801052B0,u32,num_arrow_angles
+801059A0,data,overlay_base,Overlay starting location
