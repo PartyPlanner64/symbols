@@ -415,6 +415,7 @@
 800CE202,u16,current_scene
 800D1108,data,player_structs
 800D1109,u8,p1_cpu_difficulty
+800D110A,u8,p1_controller
 800D110B,u8,p1_char,Mario=0,Luigi=1,Peach=2,Yoshi=3,Wario=4,DK=5,Waluigi=6,Daisy=7
 800D1112,u16,p1_coins,Player 1 coin count
 800D1116,u8,p1_stars,Player 1 star count
@@ -427,6 +428,7 @@
 800D1121,u8,p1_item2,Player 1 second item
 800D1122,u8,p1_item3,Player 1 third item
 800D1141,u8,p2_cpu_difficulty
+800D1142,u8,p2_controller
 800D1143,u8,p2_char
 800D114A,u16,p2_coins,Player 2 coin count
 800D114E,u8,p2_stars,Player 2 star count
@@ -439,6 +441,7 @@
 800D1159,u8,p2_item2,Player 2 second item
 800D115A,u8,p2_item3,Player 2 third item
 800D1179,u8,p3_cpu_difficulty
+800D117A,u8,p3_controller
 800D117B,u8,p3_char
 800D1182,u16,p3_coins,Player 3 coin count
 800D1186,u8,p3_stars,Player 3 star count
@@ -451,6 +454,7 @@
 800D1191,u8,p3_item2,Player 3 second item
 800D1192,u8,p3_item3,Player 3 third item
 800D11B1,u8,p4_cpu_difficulty
+800D11B2,u8,p4_controller
 800D11B3,u8,p4_char
 800D11BA,u16,p4_coins,Player 4 coin count
 800D11BE,u8,p4_stars,Player 4 star count
