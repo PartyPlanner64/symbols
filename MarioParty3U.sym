@@ -563,6 +563,7 @@
 800F59B4,code,800F59B4?
 800F5BF4,code,adjustplayercoinsgradualinternal?
 800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
+800F63F0,code,RefreshHUD,A0=player_index,refreshes player hud, or at least the items in the hud
 80105210,u16,num_board_spaces
 80105212,u16,num_chains
 80105214,u32,hydrated_space_data
