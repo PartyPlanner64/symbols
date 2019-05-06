@@ -3,6 +3,10 @@
 80000308,data,osRomBase,B0000000=cart,A6000000=IPL
 8000030C,data,osResetType,0=cold reset,1=NMI,2=false 'disk' reboot
 80000318,data,osMemSize,Size of RDRAM
+8000704C,code,PlaySoundInternalGetter?,gets word 800A97BC
+80007058,code,PlaySoundInternalSetter?,clears word 800A97BC
+80007064,code,PlaySoundInternal?,A0=index
+80007080,code,PlaySoundInternal?,A0=index,A1=?
 80009C10,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80009E6C,code,FreeMainFS,Free's an allocated MainFS file pointer
 8000B16C,code,GetRandomByte
