@@ -484,6 +484,7 @@
 800EB184,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 800EB1B0,code,GetChainLength,A0=chain_index
 800EB1CC,code,GetChainSpaceIndexFromAbsSpaceIndex,A0=abs_space_index,A1=chain_index,returns -1 if abs space not in chain
+800EB7F0,code,SetSpaceType,A0=space_index,A1=space_type
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
 800EBCC8,code,GetCurrentSpaceIndex
 800EC70C,code,stringwindowshowinner?,A1=DDSS dir and string index
