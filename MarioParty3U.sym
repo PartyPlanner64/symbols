@@ -31,6 +31,7 @@
 8004FA4C,code,SaveFileDecode,A0=start addr of portion to decode,A1=dest_addr,A2=decode_table_addr
 80055670,code,FreeGraphics
 80055810,code,ImgPackParse
+8006010C,code,DisablePromptOption,A0=window_id,A1=option
 80061FE8,code,InitFadeIn,A0=fade_type,A1=duration
 80062050,code,InitFadeOut,A0=fade_type,A1=duration
 800620BC,code,GetFadeStatus,returns 0 when fade action is finished
