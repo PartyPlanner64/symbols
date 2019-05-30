@@ -33,6 +33,7 @@
 8003B798,code,FreeTemp,A0=addr,frees in the temp heap, really an alias for normal free
 8003C14C,code,DirectionPrompt,Prompts player to choose path at branch
 8003E81C,code,changeanimation?,A0=playerstruct[0x20],A1=-1?,A2=animation?
+8003E9B0,code,RunDecisionTree,A0=decision_tree_pointer
 80045778,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui\
 80049904,code,?
 800499CC,code,?
