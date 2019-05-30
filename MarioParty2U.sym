@@ -15,6 +15,7 @@
 80040E74,code,MallocTemp,A0=size,mallocs in the temporary heap
 80040E98,code,FreeTemp,A0=addr,frees in the temp heap
 80042BE0,code,spaceanglehelper?
+80044800,code,RunDecisionTree,A0=decision_tree_pointer
 8004CA34,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
 80054268,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
 800542FC,code,spacedrawloop?
