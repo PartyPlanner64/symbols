@@ -475,6 +475,7 @@
 800D41C0,u32,cur_player_spaces_remaining
 800D8790,code,RadiansToDegrees?,A0=xyz_ptr
 800D88E8,code,spaceanglehelper?,A0=xyz_ptr,if any of xyz are non-zero, puts 1 into z?
+800DA190,code,RunDecisionTree,A0=decision_tree_pointer
 800E1F48,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
 800E4978,code,PlayerHasItem,A0=player_index,A1=item,returns index of item in player item array, otherwise -1
 800E49DC,code,PlayerHasEmptyItemSlot,A0=player_index,returns index of first empty item slot, otherwise -1
