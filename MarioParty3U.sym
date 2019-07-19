@@ -23,6 +23,7 @@
 80047EA0,code,InitProcess
 80048008,code,EndProcess
 80048128,code,LoadOverlay,A0=num,A1=entrypoint,A2=?
+8004A520,code,PlayMusic,A0=index
 8004AA88,code,PlaySound,A0=index
 8004DD7C,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str
 8004F010,code,SleepProcess
@@ -412,13 +413,22 @@
 80097650,u32,rng_seed
 800A1D70,data,generic_save_data_decode_table,44 bytes
 800CB8A4,u32,debug_font_color,Used with DrawDebugText
+800CC4E5,XX,item_hb_space_index
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
 800CD067,u8,current_player_index,Player who's turn is active
+800CD0A9,u8,cur_player_used_item,0=Player can use item, 1= Player can't use item
+800CD0AF,u8,slow_dice_flag,bit0 is P1, bit1 is P2, and so on
 800CD0B4,u16,bank_coin_total,Number of coins in bank
 800CD0B6,data,flags?,large array of global flags
 800CD0BB,u8,dice_flag?,low bit is the cursed dice
+800CE1C5,u8,coins_hb_space_index
 800CE202,u16,current_scene
+800CD096,u8,cw_ram_address1
+800CD097,u8,ww_ram_address1
+800CD098,u8,cw_ram_addess2
+800CD099,u8,ww_ram_address2
+800CD09B,u8,ww_ram_address3
 800D1108,data,player_structs
 800D1109,u8,p1_cpu_difficulty
 800D110A,u8,p1_controller
@@ -472,6 +482,7 @@
 800D11C8,u8,p4_item1,Player 4 first item
 800D11C9,u8,p4_item2,Player 4 second item
 800D11CA,u8,p4_item3,Player 4 third item
+800D124F,u8,star_hb_space_index
 800D41C0,u32,cur_player_spaces_remaining
 800D8790,code,RadiansToDegrees?,A0=xyz_ptr
 800D88E8,code,spaceanglehelper?,A0=xyz_ptr,if any of xyz are non-zero, puts 1 into z?
@@ -513,7 +524,7 @@
 800F2230,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
 800F2260,code,playerrelated?
 800F22C0,code,800F22C0?
-800F2304,code,800F2304?
+800F2304,code,CueAnimation,A0=player_index,A1=animation_index,A2=???
 800F2388,code,800F2388?
 800F244C,code,800F244C?
 800F2484,code,player code no op?
