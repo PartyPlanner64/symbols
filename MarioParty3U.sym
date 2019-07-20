@@ -33,6 +33,7 @@
 80055670,code,FreeGraphics
 80055810,code,ImgPackParse
 8006010C,code,DisablePromptOption,A0=window_id,A1=option
+80061188,code,obtainwindowhandle?,A0=?,A1=?,A2=?,return value is window handle
 80061FE8,code,InitFadeIn,A0=fade_type,A1=duration
 80062050,code,InitFadeOut,A0=fade_type,A1=duration
 800620BC,code,GetFadeStatus,returns 0 when fade action is finished
