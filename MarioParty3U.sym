@@ -32,6 +32,8 @@
 8004FA4C,code,SaveFileDecode,A0=start addr of portion to decode,A1=dest_addr,A2=decode_table_addr
 80055670,code,FreeGraphics
 80055810,code,ImgPackParse
+8005B43C,code,RefreshMsgWindow?,a0 = window ID?, a1 = message pointer, a2 = ???, a3 = ???
+8005B6BC,code,RefreshString?,a0 = window ID?, a1 = string pointer, a2 =???
 8006010C,code,DisablePromptOption,A0=window_id,A1=option
 80061188,code,obtainwindowhandle?,A0=?,A1=?,A2=?,return value is window handle
 80061FE8,code,InitFadeIn,A0=fade_type,A1=duration
@@ -414,10 +416,42 @@
 80097650,u32,rng_seed
 800A1D70,data,generic_save_data_decode_table,44 bytes
 800CB8A4,u32,debug_font_color,Used with DrawDebugText
+800CC3F4,u8,p1_buttonpress,0x80 (A), 0x40 (B)
+800CC3F5,u8,p1_buttonpress2,0x1 (Right C), 0x2 (Left C), etc
+800CC3F6,u8,p1_analog_x_axis
+800CC3F7,u8,p1_analog_y_axis
+800CC3FC,u8,p2_buttonpress,0x80 (A), 0x40 (B)
+800CC3FD,u8,p2_buttonpress2,0x1 (Right C), 0x2 (Left C), etc
+800CC3FE,u8,p2_analog_x_axis
+800CC3FF,u8,p2_analog_y_axis
+800CC404,u8,p3_buttonpress,0x80 (A), 0x40 (B)
+800CC405,u8,p3_buttonpress2,0x1 (Right C), 0x2 (Left C), etc
+800CC406,u8,p3_analog_x_axis
+800CC407,u8,p3_analog_y_axis
+800CC40C,u8,p4_buttonpress,0x80 (A), 0x40 (B)
+800CC40D,u8,p4_buttonpress2,0x1 (Right C), 0x2 (Left C), etc
+800CC40E,u8,p4_analog_x_axis
+800CC40F,u8,p4_analog_y_axis
 800CC4E5,u8,hidden_block_item_space_index
+800CCF7C,u8,p1_buttonpress3,see above
+800CCF7D,u8,p1_buttonpress4
+800CCF7E,u8,p2_buttonpress3
+800CCF7F,u8,p2_buttonpress4
+800CCF80,u8,p3_buttonpress3
+800CCF81,u8,p3_buttonpress4
+800CCF82,u8,p4_buttonpress3
+800CCF83,u8,p4_buttonpress4
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
 800CD067,u8,current_player_index,Player who's turn is active
+800CD096,u8,cw_ram_address1?
+800CD097,u8,ww_ram_address1?
+800CD098,u8,cw_ram_addess2?
+800CD099,u8,ww_ram_address2?
+800CD09A,u8,cc_ram_address3?,related to Whomp, FF if he's not been visited
+800CD09B,u8,ww_ram_address3?
+800CD09D,u8,cc_ram_address2?,1 if bottom Thwomp is on left, 0 if right
+800CD09F,u8,cc_ram_address?,1 if top Thwomp is on left, 0 if right
 800CD0A9,u8,cur_player_used_item,0=Player can use item, 1= Player can't use item
 800CD0AF,u8,slow_dice_flags,bit0 is P1, bit1 is P2, and so on
 800CD0B4,u16,bank_coin_total,Number of coins in bank
@@ -425,11 +459,6 @@
 800CD0BB,u8,dice_flag?,low bit is the cursed dice
 800CE1C5,u8,hidden_block_coins_space_index
 800CE202,u16,current_scene
-800CD096,u8,cw_ram_address1?
-800CD097,u8,ww_ram_address1?
-800CD098,u8,cw_ram_addess2?
-800CD099,u8,ww_ram_address2?
-800CD09B,u8,ww_ram_address3?
 800D1108,data,player_structs
 800D1109,u8,p1_cpu_difficulty
 800D110A,u8,p1_controller
@@ -440,10 +469,24 @@
 800D1118,u8,p1_cur_space_index,Player 1 current space index
 800D1119,u8,p1_next_chain_index,Player 1 next chain index
 800D111A,u8,p1_next_space_index,Player 1 next space index
+800D111D,u8,p1_prev_chain_index,Player 1 previous chain index
+800D111E,u8,p1_prev_space_index,Player 1 previous space index
 800D111F,u8,p1_status_flags,0x80 (reset effect you land), 0x40 (apply a bowser head), 0x20 (bowser slow curse head), 0x1 (move in reverse)
 800D1120,u8,p1_item1,Player 1 first item
 800D1121,u8,p1_item2,Player 1 second item
 800D1122,u8,p1_item3,Player 1 third item
+800D1123,u8,p1_bowser_suit_flag,1 = suit is on
+800D1130,u16,p1_minigame_star
+800D1132,u16,p1_coin_star
+800D1134,s8,p1_happening_space_count
+800D1135,u8,p1_red_space_count
+800D1136,u8,p1_blue_space_count
+800D1137,u8,p1_chance_space_count
+800D1138,u8,p1_bowser_space_count
+800D1139,u8,p1_battle_space_count
+800D113A,u8,p1_item_space_count
+800D113B,u8,p1_bank_space_count
+800D113C,u8,p1_game_guy_space_count
 800D1141,u8,p2_cpu_difficulty
 800D1142,u8,p2_controller
 800D1143,u8,p2_char
@@ -453,10 +496,24 @@
 800D1150,u8,p2_cur_space_index,Player 2 current space index
 800D1151,u8,p2_next_chain_index,Player 2 next chain index
 800D1152,u8,p2_next_space_index,Player 2 next space index
+800D1155,u8,p2_prev_chain_index,Player 2 previous chain index
+800D1156,u8,p2_prev_space_index,Player 2 previous space index
 800D1157,u8,p2_status_flags,see p1 notes
 800D1158,u8,p2_item1,Player 2 first item
 800D1159,u8,p2_item2,Player 2 second item
 800D115A,u8,p2_item3,Player 2 third item
+800D115B,u8,p2_bowser_suit_flag,1 = suit is on
+800D1168,u16,p2_minigame_star
+800D116A,u16,p2_coin_star
+800D116C,s8,p2_happening_space_count
+800D116D,u8,p2_red_space_count
+800D116E,u8,p2_blue_space_count
+800D116F,u8,p2_chance_space_count
+800D1170,u8,p2_bowser_space_count
+800D1171,u8,p2_battle_space_count
+800D1172,u8,p2_item_space_count
+800D1173,u8,p2_bank_space_count
+800D1174,u8,p2_game_guy_space_count
 800D1179,u8,p3_cpu_difficulty
 800D117A,u8,p3_controller
 800D117B,u8,p3_char
@@ -466,10 +523,24 @@
 800D1188,u8,p3_cur_space_index,Player 3 current space index
 800D1189,u8,p3_next_chain_index,Player 3 next chain index
 800D118A,u8,p3_next_space_index,Player 3 next space index
+800D118D,u8,p3_prev_chain_index,Player 3 previous chain index
+800D118E,u8,p3_prev_space_index,Player 3 previous space index
 800D118F,u8,p3_status_flags,see p1 notes
 800D1190,u8,p3_item1,Player 3 first item
 800D1191,u8,p3_item2,Player 3 second item
 800D1192,u8,p3_item3,Player 3 third item
+800D1193,u8,p3_bowser_suit_flag,1 = suit is on
+800D11A0,u16,p3_minigame_star
+800D11A2,u16,p3_coin_star
+800D11A4,s8,p3_happening_space_count
+800D11A5,u8,p3_red_space_count
+800D11A6,u8,p3_blue_space_count
+800D11A7,u8,p3_chance_space_count
+800D11A8,u8,p3_bowser_space_count
+800D11A9,u8,p3_battle_space_count
+800D11AA,u8,p3_item_space_count
+800D11AB,u8,p3_bank_space_count
+800D11AC,u8,p3_game_guy_space_count
 800D11B1,u8,p4_cpu_difficulty
 800D11B2,u8,p4_controller
 800D11B3,u8,p4_char
@@ -479,10 +550,24 @@
 800D11C0,u8,p4_cur_space_index,Player 4 current space index
 800D11C1,u8,p4_next_chain_index,Player 4 next chain index
 800D11C2,u8,p4_next_space_index,Player 4 next space index
+800D11C5,u8,p4_prev_chain_index,Player 4 previous chain index
+800D11C6,u8,p4_prev_space_index,Player 4 previous space index
 800D11C7,u8,p4_status_flags,see p1 notes
 800D11C8,u8,p4_item1,Player 4 first item
 800D11C9,u8,p4_item2,Player 4 second item
 800D11CA,u8,p4_item3,Player 4 third item
+800D11CB,u8,p4_bowser_suit_flag,1 = suit is on
+800D11D8,u16,p4_minigame_star
+800D11DA,u16,p4_coin_star
+800D11DC,s8,p4_happening_space_count
+800D11DD,u8,p4_red_space_count
+800D11DE,u8,p4_blue_space_count
+800D11DF,u8,p4_chance_space_count
+800D11E0,u8,p4_bowser_space_count
+800D11E1,u8,p4_battle_space_count
+800D11E2,u8,p4_item_space_count
+800D11E3,u8,p4_bank_space_count
+800D11E4,u8,p4_game_guy_space_count
 800D124F,u8,hidden_block_star_space_index
 800D41C0,u32,cur_player_spaces_remaining
 800D8790,code,RadiansToDegrees?,A0=xyz_ptr
