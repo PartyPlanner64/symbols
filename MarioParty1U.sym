@@ -553,6 +553,7 @@
 800ED142,u16,bank_coins,Coins in bank
 800ED144,u16,bank_stars,Stars in bank
 800ED148,u16,enabled_feature_flags
+800ED192,u16,times_passed_start,Number of times the start space has been passed
 800ED4B0,data,string_data_cache?,Something to do with windows or strings
 800ED550,u16,max_objects,set from InitObjectSystem
 800ED5C7,u8,total_turns,Total game turns
