@@ -17,6 +17,16 @@
 80042BE0,code,spaceanglehelper?
 80044800,code,RunDecisionTree,A0=decision_tree_pointer
 8004CA34,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
+8004D6A0,code,UseMushroom,Mushroom item function
+8004D734,code,UseSkeleton_key,Skeleton Key item function
+8004D758,code,UsePlunder_chest,Plunder Chest item function
+8004D780,code,UseBowserBomb,Bowser Bomb item function
+8004D7A0,code,UseDuelingGlove,Dueling Glove item function
+8004D858,code,UseWarpBlock,Warp Block item function
+8004D8B0,code,UseGoldenMushroom,Golden Mushroom item function
+8004D944,code,UseBooBell,Boo Bell item function
+8004DA2C,code,UseBowserSuit,Bowser Suit item function
+8004DAC4,code,UseMagicLamp,Magic Lamp item function
 80054268,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
 800542FC,code,spacedrawloop?
 80054B8C,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
@@ -450,6 +460,7 @@
 800BDBC0,code,gspL3DEX2_fifoTextStart?
 800BE960,data,aspMainDataStart?
 800BEC20,data,aspMainTextStart?
+800CC010,data,item_function_pointers,u32[10]
 800DEFD0,data,perm_heap_addr,Address of permanent heap
 800DEFE0,data,temp_heap_addr,Address of temporary heap
 800E18D0,u16,num_board_spaces
