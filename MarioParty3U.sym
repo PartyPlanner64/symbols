@@ -583,6 +583,7 @@
 800EB184,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 800EB1B0,code,GetChainLength,A0=chain_index
 800EB1CC,code,GetChainSpaceIndexFromAbsSpaceIndex,A0=abs_space_index,A1=chain_index,returns -1 if abs space not in chain
+800EB24C,code,SetPlayerOntoAbsSpaceIndex,A0=abs_space_index,A1=current_player_chain_ptr,A2=current_player_space_ptr,Sets a player onto a chain and space inferred from an absolute space index
 800EB7F0,code,SetSpaceType,A0=space_index,A1=space_type
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
 800EBCBC,code,SetCurrentSpaceIndex,A0=space_index
@@ -671,6 +672,19 @@
 800F5BF4,code,adjustplayercoinsgradualinternal?
 800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 800F63F0,code,RefreshHUD,A0=player_index,refreshes player hud, or at least the items in the hud
+80100DA0,data,mini_ids_4p
+80100DB4,data,mini_ids_4p_easy
+80100DC0,data,mini_ids_1v3
+80100DCC,data,mini_ids_1v3_easy
+80100DD4,data,mini_ids_2v2
+80100DE0,data,mini_ids_2v2_easy
+80100DE8,data,mini_ids_battle
+80100DF0,data,mini_ids_battle_easy
+80100DF4,data,mini_ids_item
+80100DFC,data,mini_ids_item_easy
+80100E08,data,mini_ids_duel
+80100E10,data,mini_ids_duel_easy
+80100E18,data,num_minis_in_roulette,Number of Mini-Games to populate the roulette with for each type (4p, 1v3, 2v2, battle, item, duel)
 80105210,u16,num_board_spaces
 80105212,u16,num_chains
 80105214,u32,hydrated_space_data
