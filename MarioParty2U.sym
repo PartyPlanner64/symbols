@@ -3,6 +3,7 @@
 80000308,data,osRomBase,B0000000=cart,A6000000=IPL
 8000030C,data,osResetType,0=cold reset,1=NMI,2=false 'disk' reboot
 80000318,data,osMemSize,Size of RDRAM
+80014B30,code,PlaySound,A0=sound_index
 80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
 80018AFC,code,GetRandomByte
@@ -17,9 +18,20 @@
 80042BE0,code,spaceanglehelper?
 80044800,code,RunDecisionTree,A0=decision_tree_pointer
 8004CA34,code,ShowPlayerCoinChange,A0=player_index,A1=amount (signed),shows coins +/- next to player ui
+8004D6A0,code,UseMushroom,Mushroom item function
+8004D734,code,UseSkeleton_key,Skeleton Key item function
+8004D758,code,UsePlunder_chest,Plunder Chest item function
+8004D780,code,UseBowserBomb,Bowser Bomb item function
+8004D7A0,code,UseDuelingGlove,Dueling Glove item function
+8004D858,code,UseWarpBlock,Warp Block item function
+8004D8B0,code,UseGoldenMushroom,Golden Mushroom item function
+8004D944,code,UseBooBell,Boo Bell item function
+8004DA2C,code,UseBowserSuit,Bowser Suit item function
+8004DAC4,code,UseMagicLamp,Magic Lamp item function
 80054268,code,AddArrowAngle,F0=degree_rot_of_arrow,0-360,0 is facing normal, rotates counter clockwise as degrees increase
 800542FC,code,spacedrawloop?
 80054B8C,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
+80054BB0,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 8005568C,code,EventTableHydrate,Moves event table data into the space data
 80056368,code,stringwindowshow?,A0=character_index,A1=string index,A2 onward: string format options
 80056658,code,spaceanglehelper?
@@ -37,8 +49,11 @@
 8006850C,code,Free,A0=allocated heap pointer
 800760C0,code,InitObjSys
 80076E64,code,InitProcess
+8007975C,code,PlayCharacterSound,A0=sound_index,A1=character_number,Plays character voices without overlapping them
 8007D9E0,code,SleepProcess
 8007DA44,code,SleepVProcess
+8008F544,code,InitFadeIn,A0=fade_type,A1=duration (frames)... 00=simple fade, 01=circle, 02=star, 03=bowser, 04=happening space, 05=chance time, 06=square, 07=explosion, 08=bob-omb, 09=toad, 0A=koopa, 0B=goomba, 0C=shy guy, 0D=sun, 0E=moon
+8008F5AC,code,InitFadeOut,A0=fade_type,A1=duration (frames)... 00=simple fade, 01=circle, 02=star, 03=bowser, 04=happening space, 05=chance time, 06=square, 07=explosion, 08=bob-omb, 09=toad, 0A=koopa, 0B=goomba, 0C=shy guy, 0D=sun, 0E=moon
 800DEFD0,data,perm_heap_addr,Permanent heap pointer
 800DEFE0,data,temp_heap_addr,Temporary heap address
 80092AF0,code,alSynStartVoiceParams
@@ -450,6 +465,7 @@
 800BDBC0,code,gspL3DEX2_fifoTextStart?
 800BE960,data,aspMainDataStart?
 800BEC20,data,aspMainTextStart?
+800CC010,data,item_function_pointers,u32[10]
 800DEFD0,data,perm_heap_addr,Address of permanent heap
 800DEFE0,data,temp_heap_addr,Address of temporary heap
 800E18D0,u16,num_board_spaces
