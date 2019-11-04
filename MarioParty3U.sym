@@ -588,8 +588,9 @@
 800EBA60,code,EventTableHydrate,Moves event table data into the space data
 800EBCBC,code,SetCurrentSpaceIndex,A0=space_index
 800EBCC8,code,GetCurrentSpaceIndex
+800EC6C8,code,CloseMessage,Closes open message window (with animation)
 800EC70C,code,stringwindowshowinner?,A1=DDSS dir and string index
-800EC8EC,code,stringwindowshow?,A0=character_index,A1=DDSS dir and string index or address,A2...rest=string format
+800EC8EC,code,ShowMessage,A0=character_index,A1=string index/pointer,A2 onward: string format options
 800EC92C,code,stringwindowshow?,A1=DDSS dir and string index
 800EC980,code,stringwindowshow?,A1=DDSS dir and string index
 800ECB58,code,GetAngleBetweenSpaces,A0=space_1_data[0x8],A1=space_2_data[0x8],A2=output_xyz_ptr,returns radians?
