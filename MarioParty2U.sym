@@ -3,7 +3,7 @@
 80000308,data,osRomBase,B0000000=cart,A6000000=IPL
 8000030C,data,osResetType,0=cold reset,1=NMI,2=false 'disk' reboot
 80000318,data,osMemSize,Size of RDRAM
-80014B30,code,PlaySound,A0=sound_index
+80014B14,code,PlaySound,A0=sound_index
 80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
 80018AFC,code,GetRandomByte
@@ -33,8 +33,12 @@
 80054B8C,code,GetSpaceData,A0=space_index,Gets pointer to the space data originating from the board def
 80054BB0,code,GetAbsSpaceIndexFromChainSpaceIndex,A0=chain_index,A1=space_index_in_chain gets true space index from chain+index
 8005568C,code,EventTableHydrate,Moves event table data into the space data
-80056368,code,stringwindowshow?,A0=character_index,A1=string index,A2 onward: string format options
+80056144,code,CloseMessage,Closes open message window (with animation)
+80056168,code,closemessage?,Closes open message window (no animation)
+80056368,code,ShowMessage,A0=character_index,A1=string index,A2 onward: string format options
 80056658,code,spaceanglehelper?
+80056C30,code,RotateCharacterModel,A0=player_index (-1 for cur), A1=speed_to_turn, A2=space_index to turn towards
+800572E0,code,SetPlayerOntoChain,A0=player_index,A1=chain_index,A2=space_index
 8005734C,code,SetNextChainAndSpace
 8005DC30,code,GetCurrentPlayerIndex
 8005DC3C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
@@ -42,6 +46,7 @@
 8005DCA0,code,PlayerIsCPU,A0=player_index
 8005DCC8,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
 8005DD38,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
+8005DD68,code,SetBoardPlayerAnimation,A0=player_index,A1=animation_index,A2=???
 800614B4,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 80068328,code,IsBoardFeatureDisabled?
 80068460,code,MakeHeap,A0=addr,A1=size,instantiates the heap by writing initial header
@@ -475,6 +480,8 @@
 800E1940,data,arrow_angles,f32[8]
 800E1960,u32,num_arrow_angles
 800FA63E,u16,scene,Current scene number
+800F93AE,u16,total_turns
+800F93B0,u16,current_turn
 800FD2C8,u16,p1_coins,Player 1 coin count
 800FD2CE,u16,p1_stars,Player 1 star count
 800FD2D0,u16,p1_cur_chain_index,Player 1 current chain index
@@ -500,3 +507,4 @@
 800FD375,u8,p4_item,Player 4 item
 800FD376,u16,p4_turn_status,Player 4 turn status
 800FD418,u16,hidden_space_primary,space index of primary hidden space
+80103A64,code,ViewMap,Allows Player to view the board
