@@ -479,9 +479,9 @@
 800E18D8,u32,hydrated_chains
 800E1940,data,arrow_angles,f32[8]
 800E1960,u32,num_arrow_angles
-800FA63E,u16,scene,Current scene number
 800F93AE,u16,total_turns
 800F93B0,u16,current_turn
+800FA63E,u16,scene,Current scene number
 800FD2C8,u16,p1_coins,Player 1 coin count
 800FD2CE,u16,p1_stars,Player 1 star count
 800FD2D0,u16,p1_cur_chain_index,Player 1 current chain index
@@ -507,4 +507,3 @@
 800FD375,u8,p4_item,Player 4 item
 800FD376,u16,p4_turn_status,Player 4 turn status
 800FD418,u16,hidden_space_primary,space index of primary hidden space
-80103A64,code,ViewMap,Allows Player to view the board
