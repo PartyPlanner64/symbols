@@ -476,6 +476,7 @@
 800D1121,u8,p1_item2,Player 1 second item
 800D1122,u8,p1_item3,Player 1 third item
 800D1123,u8,p1_bowser_suit_flag,1 = suit is on
+800D1124,u8,p1_turn_color_status,00=blank,01=blue,02=red,03=yellow,04=green,05=orange???
 800D1130,u16,p1_minigame_star
 800D1132,u16,p1_coin_star
 800D1134,s8,p1_happening_space_count
@@ -503,6 +504,7 @@
 800D1159,u8,p2_item2,Player 2 second item
 800D115A,u8,p2_item3,Player 2 third item
 800D115B,u8,p2_bowser_suit_flag,1 = suit is on
+800D115C,u8,p2_turn_color_status,00=blank,01=blue,02=red,03=yellow,04=green,05=orange???
 800D1168,u16,p2_minigame_star
 800D116A,u16,p2_coin_star
 800D116C,s8,p2_happening_space_count
@@ -530,6 +532,7 @@
 800D1191,u8,p3_item2,Player 3 second item
 800D1192,u8,p3_item3,Player 3 third item
 800D1193,u8,p3_bowser_suit_flag,1 = suit is on
+800D1194,u8,p3_turn_color_status,00=blank,01=blue,02=red,03=yellow,04=green,05=orange???
 800D11A0,u16,p3_minigame_star
 800D11A2,u16,p3_coin_star
 800D11A4,s8,p3_happening_space_count
@@ -557,6 +560,7 @@
 800D11C9,u8,p4_item2,Player 4 second item
 800D11CA,u8,p4_item3,Player 4 third item
 800D11CB,u8,p4_bowser_suit_flag,1 = suit is on
+800D11CC,u8,p4_turn_color_status,00=blank,01=blue,02=red,03=yellow,04=green,05=orange???
 800D11D8,u16,p4_minigame_star
 800D11DA,u16,p4_coin_star
 800D11DC,s8,p4_happening_space_count
