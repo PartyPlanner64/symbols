@@ -112,7 +112,7 @@
 80052A80,code,GetCurrentPlayerIndex
 80052A8C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 80052ACC,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
-80052AE8,code,playerrelated?,A0=player_index
+80052AE8,code,PlayerStructIsCurrent,A0=struct player pointer
 80052B20,code,PlayerIsCPU,A0=player_index
 80052B48,code,AdjustPlayerCoins,A0=player_index,A1=amount (signed), ensures 0 <= coins <= 999
 80052BB8,code,PlayerHasCoins,A0=player_index,A1=min_coints tests if player coins >= A1
