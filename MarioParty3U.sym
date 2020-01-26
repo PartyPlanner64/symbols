@@ -454,7 +454,7 @@
 800CD064,u8,seventh_star_spawn_index
 800CD065,u8,eight_star_spawn_index,see above
 800CD067,u8,current_player_index,Player who's turn is active
-800CD067,u8,current_space_index
+800CD069,u8,current_space_index
 800CD096,u8,cw_ram_address1?
 800CD097,u8,ww_ram_address1?
 800CD098,u8,cw_ram_addess2?
