@@ -443,7 +443,18 @@
 800CCF83,u8,p4_buttonpress4
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
+800CD05C,u8,current_game_length,00=Lite Play,01=Standard Play,02=Full Play,03=Custom Play
+800CD05D,u8,current_star_spawn,00 for first star spawn, 01 for second star spawn index, etc.
+800CD05E,u8,first_star_spawn_index,index of the first star spawn in the current cycle (00-07)
+800CD05F,u8,second_star_spawn_index,see above
+800CD060,u8,third_star_spawn_index
+800CD061,u8,fourth_star_spawn_index
+800CD062,u8,fifth_star_spawn_index
+800CD063,u8,sixth_star_spawn_index
+800CD064,u8,seventh_star_spawn_index
+800CD065,u8,eight_star_spawn_index,see above
 800CD067,u8,current_player_index,Player who's turn is active
+800CD069,u8,current_space_index
 800CD096,u8,cw_ram_address1?
 800CD097,u8,ww_ram_address1?
 800CD098,u8,cw_ram_addess2?
@@ -452,6 +463,15 @@
 800CD09B,u8,ww_ram_address3?
 800CD09D,u8,cc_ram_address2?,1 if bottom Thwomp is on left, 0 if right
 800CD09F,u8,cc_ram_address?,1 if top Thwomp is on left, 0 if right
+800CD0A0,u8,board_ram9,ram address that persists upon exiting the game
+800CD0A1,u8,board_ram10,ram address that persists upon exiting the game
+800CD0A2,u8,board_ram11,ram address that persists upon exiting the game
+800CD0A3,u8,board_ram12,ram address that persists upon exiting the game
+800CD0A4,u8,board_ram13,ram address that persists upon exiting the game
+800CD0A5,u8,board_ram14,ram address that persists upon exiting the game
+800CD0A6,u8,board_ram15,ram address that persists upon exiting the game
+800CD0A7,u8,board_ram16,ram address that persists upon exiting the game
+800CD0A8,u8,board_ram17,ram address that persists upon exiting the game
 800CD0A9,u8,cur_player_used_item,0=Player can use item, 1= Player can't use item
 800CD0AF,u8,slow_dice_flags,bit0 is P1, bit1 is P2, and so on
 800CD0B4,u16,bank_coin_total,Number of coins in bank
@@ -604,9 +624,11 @@
 800ECE4C,code,GetSumOfPlayerStars,sums the star count of all players
 800ECE9C,code,RNGPercentChance,A0=percent_chance,given a percent chance, returns true at that likelihood
 800ECEE4,code,GetTurnsElapsed
+800ED20C,code,RotatePlayerModel,A0=player_index,-1 for cur player,A1=frames,A2=space_index
 800ED91C,code,SetPlayerOntoChain,A0=player_index,A1=chain,A2=space, sets cur and next data, assuming next is cur+1
 800ED998,code,SetNextChainAndSpace,A0=player_index,A1=chain,A2=space
-800ED9F8,code,SetPrevChainAndSpace,A0=player_index,A1=chain,A2=space,is this for reverse somehow?
+800ED9F8,code,SetPrevChainAndSpace,A0=player_index,A1=chain,A2=space
+800EDA58,code,ChangeStarLocation
 800EE9C0,code,GetPlayerPlacement,A0=player_index,returns 0,1,2,3 based on who is ranked 1st, etc.
 800EFDF4,code,diceroll?,contains golden mushroom logic to give 20 coins on 2 match, 50 coins on 3 match?
 800F2130,code,GetCurrentPlayerIndex
@@ -677,6 +699,7 @@
 800F5BF4,code,adjustplayercoinsgradualinternal?
 800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 800F63F0,code,RefreshHUD,A0=player_index,refreshes player hud, or at least the items in the hud
+800FAB98,code,InitDuel?,A0=player_struct (it seems to require other parameters to work properly)
 80100DA0,data,mini_ids_4p
 80100DB4,data,mini_ids_4p_easy
 80100DC0,data,mini_ids_1v3
