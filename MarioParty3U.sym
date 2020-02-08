@@ -445,14 +445,7 @@
 800CD05B,u8,current_turn
 800CD05C,u8,current_game_length,00=Lite Play,01=Standard Play,02=Full Play,03=Custom Play
 800CD05D,u8,current_star_spawn,00 for first star spawn, 01 for second star spawn index, etc.
-800CD05E,u8,first_star_spawn_index,index of the first star spawn in the current cycle (00-07)
-800CD05F,u8,second_star_spawn_index,see above
-800CD060,u8,third_star_spawn_index
-800CD061,u8,fourth_star_spawn_index
-800CD062,u8,fifth_star_spawn_index
-800CD063,u8,sixth_star_spawn_index
-800CD064,u8,seventh_star_spawn_index
-800CD065,u8,eight_star_spawn_index,see above
+800CD05E,u8,star_spawn_indices,array length 8 of the current star order
 800CD067,u8,current_player_index,Player who's turn is active
 800CD069,u8,current_space_index
 800CD096,u8,cw_ram_address1?
@@ -463,15 +456,15 @@
 800CD09B,u8,ww_ram_address3?
 800CD09D,u8,cc_ram_address2?,1 if bottom Thwomp is on left, 0 if right
 800CD09F,u8,cc_ram_address?,1 if top Thwomp is on left, 0 if right
-800CD0A0,u8,board_ram9,ram address that persists upon exiting the game
-800CD0A1,u8,board_ram10,ram address that persists upon exiting the game
-800CD0A2,u8,board_ram11,ram address that persists upon exiting the game
-800CD0A3,u8,board_ram12,ram address that persists upon exiting the game
-800CD0A4,u8,board_ram13,ram address that persists upon exiting the game
-800CD0A5,u8,board_ram14,ram address that persists upon exiting the game
-800CD0A6,u8,board_ram15,ram address that persists upon exiting the game
-800CD0A7,u8,board_ram16,ram address that persists upon exiting the game
-800CD0A8,u8,board_ram17,ram address that persists upon exiting the game
+800CD0A0,u8,board_ram9,free for board use, persists in save game
+800CD0A1,u8,board_ram10,free for board use, persists in save game
+800CD0A2,u8,board_ram11,free for board use, persists in save game
+800CD0A3,u8,board_ram12,free for board use, persists in save game
+800CD0A4,u8,board_ram13,free for board use, persists in save game
+800CD0A5,u8,board_ram14,free for board use, persists in save game
+800CD0A6,u8,board_ram15,free for board use, persists in save game
+800CD0A7,u8,board_ram16,free for board use, persists in save game
+800CD0A8,u8,board_ram17,free for board use, persists in save game
 800CD0A9,u8,cur_player_used_item,0=Player can use item, 1= Player can't use item
 800CD0AF,u8,slow_dice_flags,bit0 is P1, bit1 is P2, and so on
 800CD0B4,u16,bank_coin_total,Number of coins in bank
