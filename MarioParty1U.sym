@@ -134,9 +134,9 @@
 80055960,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 80056A08,code,SetupDKBoard?,A1=boarddeffile=69
 80058750,code,ExecBoardScene,A0=board_fns,A1=state,
-80059798,code,IsBoardFeatureDisabled,A0=0xD:bowser,0xE:koopa troopa,0xF:boo
-800597DC,code,SetBoardFeatureEnabled,A0=feature,or is it set disabled?
-8005982C,code,SetBoardFeatureDisabled,A0=feature,or is it set enabled?
+80059798,code,IsBoardFeatureFlagSet
+800597DC,code,SetBoardFeatureFlag,A0=feature
+8005982C,code,ClearBoardFeatureFlag,A0=feature
 80059880,code,MakeHeap,A0=addr,A1=size,instantiates the heap by writing initial header
 800598A0,code,Malloc,A0=heap pointer (main or temp),A1=size
 8005992C,code,Free,A0=allocated heap pointer
