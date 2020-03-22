@@ -23,6 +23,7 @@
 80047EA0,code,InitProcess
 80048008,code,EndProcess
 80048128,code,LoadOverlay,A0=num,A1=entrypoint,A2=?
+80048228,code,ChangeScene?,A0=scene,A1=?,A2=?
 8004A520,code,PlayMusic,A0=index
 8004AA88,code,PlaySound,A0=index
 8004DD7C,code,DrawDebugText,A0=x_pos,A1=y_pos,A2=str
