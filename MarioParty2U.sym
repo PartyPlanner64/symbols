@@ -470,6 +470,7 @@
 800BDBC0,code,gspL3DEX2_fifoTextStart?
 800BE960,data,aspMainDataStart?
 800BEC20,data,aspMainTextStart?
+800C8874,data,overlay_table
 800CC010,data,item_function_pointers,u32[10]
 800DEFD0,data,perm_heap_addr,Address of permanent heap
 800DEFE0,data,temp_heap_addr,Address of temporary heap
