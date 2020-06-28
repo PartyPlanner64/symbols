@@ -414,6 +414,7 @@
 80094720,code,gspL3DEX2_fifoTextStart?
 800954C0,data,n_aspMainDataStart?
 80095770,code,n_aspMainTextStart?
+800962F4,data,overlay_table
 80097650,u32,rng_seed
 800A1D70,data,generic_save_data_decode_table,44 bytes
 800CB8A4,u32,debug_font_color,Used with DrawDebugText
