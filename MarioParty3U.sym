@@ -443,6 +443,7 @@
 800CCF81,u8,p3_buttonpress4
 800CCF82,u8,p4_buttonpress3
 800CCF83,u8,p4_buttonpress4
+800CD059,u8,current_board_index?
 800CD05A,u8,total_turns
 800CD05B,u8,current_turn
 800CD05C,u8,current_game_length,00=Lite Play,01=Standard Play,02=Full Play,03=Custom Play
