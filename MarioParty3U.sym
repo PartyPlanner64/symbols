@@ -627,6 +627,7 @@
 800ED9F8,code,SetPrevChainAndSpace,A0=player_index,A1=chain,A2=space
 800EDA58,code,ChangeStarLocation
 800EE9C0,code,GetPlayerPlacement,A0=player_index,returns 0,1,2,3 based on who is ranked 1st, etc.
+800EEA58,code,GetPlayerPlacementAtEndOfGame,A0=player_index,returns 0,1,2,3 based on who would be ranked 1st if the game ended right now. Functions exactly like GetPlayerPlacement if the Bonus Stars are disabled, but if the Bonus Stars are enabled then the placement returned is based as if the three Bonus Stars are awarded prior to placement.
 800EFDF4,code,diceroll?,contains golden mushroom logic to give 20 coins on 2 match, 50 coins on 3 match?
 800F2130,code,GetCurrentPlayerIndex
 800F213C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
