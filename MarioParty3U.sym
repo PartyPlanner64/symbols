@@ -18,7 +18,18 @@
 8000C184,code,CloseEsprite
 80012220,code,InitCameras,A0=num_cameras
 8001FE20,code,InitAnimations,A0=1
+80035840,code,MakePermHeap
 80035864,code,MallocPerm,A0=size,mallocs in the permanent heap
+80035888,code,FreePerm,A0=ptr,frees memory from MallocPerm
+800358A4,code,ReallocPerm
+800358D0,code,GetAllocatedPermHeapSize
+800358F0,code,GetUsedMemoryBlockCountPerm
+80035910,code,MakeTempHeap
+80035934,code,MallocTemp
+80035958,code,FreeTemp
+80035974,code,ReallocTemp
+800359A0,code,GetAllocatedTempHeapSize
+800359C0,code,GetUsedMemoryBlockCountTemp
 80047160,code,InitObjSys
 80047EA0,code,InitProcess
 80048008,code,EndProcess
