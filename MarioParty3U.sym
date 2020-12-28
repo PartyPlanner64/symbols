@@ -10,6 +10,9 @@
 800072A4,code,PlaySoundInternal?,gets addr of innermost SBF0 sfx table structs
 80009C10,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80009E6C,code,FreeMainFS,Free's an allocated MainFS file pointer
+8000A230,code,DecodeNone
+8000A2CC,code,DecodeLZ
+8000B000,code,DecodeFile
 8000B16C,code,GetRandomByte
 8000B838,code,LoadGraphics
 8000BBD4,code,SetSpriteCenter?,A0=X,A1=Y
@@ -30,6 +33,13 @@
 80035974,code,ReallocTemp
 800359A0,code,GetAllocatedTempHeapSize
 800359C0,code,GetUsedMemoryBlockCountTemp
+800360D0,code,MakeHeap
+800360F0,code,Malloc
+80036188,code,Free
+80036248,code,Realloc
+80036310,code,GetAllocatedHeapSize
+80036344,code,GetUsedMemoryBlockCount
+8003636C,code,GetMemoryAllocSize
 80047160,code,InitObjSys
 80047EA0,code,InitProcess
 80048008,code,EndProcess
