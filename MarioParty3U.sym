@@ -494,6 +494,22 @@
 800CD0B4,u16,bank_coin_total,Number of coins in bank
 800CD0B6,data,flags?,large array of global flags
 800CD0BB,u8,dice_flag?,low bit is the cursed dice
+800CDBD2,u8,p1_forced_dice_roll, forces p1's normal roll
+800CDBD3,u8,p1_forced_dice_roll2, forces p1's second roll when using a mushroom
+800CDBD4,u8,p1_forced_dice_roll3, forces p1's third roll when using a golden mushroom
+800CDBD5,u8,p1_spaces_remaining, controls the number above the player's head
+800CDC1E,u8,p2_forced_dice_roll, forces p2's normal roll
+800CDC1F,u8,p2_forced_dice_roll2, forces p2's second roll when using a mushroom
+800CDC20,u8,p2_forced_dice_roll3, forces p2's third roll when using a golden mushroom
+800CDC21,u8,p2_spaces_remaining, controls the number above the player's head
+800CDC6A,u8,p3_forced_dice_roll, forces p3's normal roll
+800CDC6B,u8,p3_forced_dice_roll2, forces p3's second roll when using a mushroom
+800CDC6C,u8,p3_forced_dice_roll3, forces p3's third roll when using a golden mushroom
+800CDC6D,u8,p3_spaces_remaining, controls the number above the player's head
+800CDCB6,u8,p4_forced_dice_roll, forces p4's normal roll
+800CDCB7,u8,p4_forced_dice_roll2, forces p4's second roll when using a mushroom
+800CDCB8,u8,p4_forced_dice_roll3, forces p4's third roll when using a golden mushroom
+800CDCB9,u8,p4_spaces_remaining, controls the number above the player's head
 800CE1C5,u8,hidden_block_coins_space_index
 800CE202,u16,current_scene
 800D1108,data,player_structs
@@ -718,6 +734,7 @@
 800F5BF4,code,adjustplayercoinsgradualinternal?
 800F5D44,code,AdjustPlayerCoinsGradual,A0=player_index,A1=amount,like AdjustPlayerCoins but with sounds one at a time
 800F63F0,code,RefreshHUD,A0=player_index,refreshes player hud, or at least the items in the hud
+800F915C,code,SetCameraType,A0=type, 01=follow player, 03=stay still
 800FAB98,code,InitDuel?,A0=player_struct (it seems to require other parameters to work properly)
 80100DA0,data,mini_ids_4p
 80100DB4,data,mini_ids_4p_easy
@@ -732,10 +749,19 @@
 80100E08,data,mini_ids_duel
 80100E10,data,mini_ids_duel_easy
 80100E18,data,num_minis_in_roulette,Number of Mini-Games to populate the roulette with for each type (4p, 1v3, 2v2, battle, item, duel)
+80102C58,u32,boo_function_pointer
 80105210,u16,num_board_spaces
 80105212,u16,num_chains
 80105214,u32,hydrated_space_data
 80105218,u32,hydrated_chains
 80105290,data,arrow_angles,f32[8]
 801052B0,u32,num_arrow_angles
+801057F0,u32,p1_hud_xpos, float for p1's HUD x pos
+801057F4,u32,p1_hud_ypos, float for p1's HUD y pos
+8010585C,u32,p2_hud_xpos, see p1
+80105860,u32,p2_hud_ypos, see p1
+801058C8,u32,p3_hud_xpos, see p1
+801058CC,u32,p3_hud_ypos, see p1
+80105934,u32,p4_hud_xpos, see p1
+80105938,u32,p4_hud_ypos, see p1
 801059A0,data,overlay_base,Overlay starting location
