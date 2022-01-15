@@ -40,6 +40,7 @@
 80056C30,code,RotateCharacterModel,A0=player_index (-1 for cur), A1=speed_to_turn, A2=space_index to turn towards
 800572E0,code,SetPlayerOntoChain,A0=player_index,A1=chain_index,A2=space_index
 8005734C,code,SetNextChainAndSpace
+80059FD0,code,GetPlayerPlacement?
 8005DC30,code,GetCurrentPlayerIndex
 8005DC3C,code,GetPlayerStruct,A0=player_index pass -1 to get current player's struct
 8005DC84,code,PlayerIsCurrent,A0=player_index tests if A0 is the current player
