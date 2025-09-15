@@ -7,6 +7,7 @@
 80017680,code,ReadMainFS,Reads file from MainFS, allocating space. A0=DDDDFFFF
 80017800,code,FreeMainFS,Free's an allocated MainFS file pointer
 80018AFC,code,GetRandomByte
+80018B30,code,LoadOverlay
 8001D190,code,interpretFORM?
 80038F0C,code,interpretMTNX?,A0=mtnx_pointer
 80040D80,code,MakePermHeap,A0=heap_addr,A1=heap_len,calls MakeHeap and persists pointer
